@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="Deliverance Church Mateka Portfolio.">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <title>Deliverance Church - Mateka</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.1/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.1/ScrollTrigger.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+  <!-- update the version number as needed -->
+    <script defer src="/__/firebase/10.3.0/firebase-app-compat.js"></script>
+    <!-- include only the Firebase features as you need -->
+    <script defer src="/__/firebase/10.3.0/firebase-auth-compat.js"></script>
+    <script defer src="/__/firebase/10.3.0/firebase-database-compat.js"></script>
+    <script defer src="/__/firebase/10.3.0/firebase-firestore-compat.js"></script>
+    <script defer src="/__/firebase/10.3.0/firebase-functions-compat.js"></script>
+    <script defer src="/__/firebase/10.3.0/firebase-messaging-compat.js"></script>
+    <script defer src="/__/firebase/10.3.0/firebase-storage-compat.js"></script>
+    <script defer src="/__/firebase/10.3.0/firebase-analytics-compat.js"></script>
+    <script defer src="/__/firebase/10.3.0/firebase-remote-config-compat.js"></script>
+    <script defer src="/__/firebase/10.3.0/firebase-performance-compat.js"></script>
+    <!-- 
+      initialize the SDK after all desired features are loaded, set useEmulator to false
+      to avoid connecting the SDK to running emulators.
+    -->
+    <script defer src="/__/firebase/init.js?useEmulator=true"></script>
+
+    <style media="screen">
+      body { background: #ECEFF1; color: rgba(0,0,0,0.87); font-family: Roboto, Helvetica, Arial, sans-serif; margin: 0; padding: 0; }
+      #message { background: white; max-width: 360px; margin: 100px auto 16px; padding: 32px 24px; border-radius: 3px; }
+      #message h2 { color: #ffa100; font-weight: bold; font-size: 16px; margin: 0 0 8px; }
+      #message h1 { font-size: 22px; font-weight: 300; color: rgba(0,0,0,0.6); margin: 0 0 16px;}
+      #message p { line-height: 140%; margin: 16px 0 24px; font-size: 14px; }
+      #message a { display: block; text-align: center; background: #039be5; text-transform: uppercase; text-decoration: none; color: white; padding: 16px; border-radius: 4px; }
+      #message, #message a { box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24); }
+      #load { color: rgba(0,0,0,0.4); text-align: center; font-size: 13px; }
+      @media (max-width: 600px) {
+        body, #message { margin-top: 0; background: white; box-shadow: none; }
+        body { border-top: 16px solid #ffa100; }
+      }
+
+      #sermons h2 {
+    font-size: 32px;
+    color: white;
+}
+
+/* Style the background color of the sermons section */
+#sermons {
+    background-color: #008080; /* Replace with your desired background color */
+    padding: 60px 0; /* Add some padding to the top and bottom for spacing */
+    border-radius: 10px;
+}
+
+
+/* Style the sermon cards */
+.card {
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.card-text {
+    font-size: 16px;
+    color: #666;
+}
+
+.card-img-top {
+    max-height: 200px;
+    object-fit: cover;
+}
+
+/* Style the "Read More" button */
+.btn-primary {
+    background-color: #007bff;
+    color: #fff;
+    transition: background-color 0.2s;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+}
+
+/* Style the background color of the events section */
+#events {
+    background-color: #008080; /* Replace with your desired background color */
+    color: #fff; /* Set text color to white */
+    padding: 60px 0; /* Add padding to the top and bottom of the section */
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+
+/* Style the event boxes */
+.event-boxes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.event-box {
+    background-color: #fff; /* Background color for each event box */
+    border-radius: 10px;
+    padding: 20px;
+    width: calc(33.33% - 20px); /* Adjust the width of the event boxes */
+    margin-bottom: 20px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.event-box i {
+    font-size: 32px;
+    color: #008080; /* Icon color */
+}
+
+.event-box h3 {
+    font-size: 18px;
+    margin-top: 10px;
+    color: #008080; /* Event title color */
+}
+
+.event-box p {
+    font-size: 14px;
+    color: #333; /* Event description color */
+}
+
+
+
+ 
+    </style>
+
+</head>
+
+<!-- Navigation Bar -->
+ 
+    <!-- Navbar content with navigation links -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="#home">Deliverance Church - Mateka</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="about.html">About us</a></li>
+            <li class="nav-item"><a class="nav-link" href="sermons.html">Sermons</a></li>
+            <!-- <li class="nav-item"><a class="nav-link" href="#events">Events</a></li> -->
+            <li class="nav-item"><a class="nav-link" href="ministries.html">Ministries</a></li>
+            <li class="nav-item"><a class="nav-link" href="donate.html">Give</a></li>
+            <li class="nav-item"><a class="nav-link" href="visit.html">Visit Us</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+
+  <!-- Hero Section -->
+  <section id="home" class="bg-light text-white text-center py-5">
+    <div class="home-intro-text">
+      <h1 class="name hero-text">We Invite You to Deliverance Church Mateka<h1>
+      <p class="role hero-text">The Church of Choice</p>
+      <p class="subtitle hero-text">Blessed is the one who perseveres under trial because, having stood the test, that person will receive the crown of life that the Lord has promised to those who love him. </p>
+      <p class="title-verse">James 1:12</p>
+    </div>  
+  </section>
+
+    <section id="events" class="hero">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <h1 class="text-center"> Weekly Events</h1>
+                    <!-- Add your content here -->
+                </div>
+                <div class="col-md-6">
+                    <div class="image-slider">
+                        <!-- Add your image slider content here -->
+                        <!-- ... -->
+                    </div>
+                    <div class="event-boxes mt-4">
+                        <!-- Add your styled icon boxes for planned events here -->
+                        <div class="event-box mb-3 p-3">
+                            <i class="fas fa-calendar"></i>
+                            <h3 class="mt-2">Bible Study</h3>
+                            <p>Come Study the Word Every Wednesday</p>
+                        </div>
+                        <div class="event-box mb-3 p-3">
+                            <i class="fas fa-calendar"></i>
+                            <h3 class="mt-2">Cell Group Meeting</h3>
+                            <p>We Meet Every Friday
+                            </p>
+                        </div>
+                        <div class="event-box p-3">
+                            <i class="fas fa-calendar"></i>
+                            <h3 class="mt-2">Sunday Service</h3>
+                            <p>Church Service from 8:30 AM - 12:00 PM</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!-- Sermon Content -->
+    <section id="sermons" class="hero">
+    <h2 class="text-center mb-4">God's Word</h2>
+
+    <div class="row">
+        <!-- Sermon Card 1 -->
+        <div class="col-md-4 mb-4">
+            <div class="card">
+                <img src="bible.jpg" class="card-img-top" alt="Sermon 1">
+                <div class="card-body">
+                    <h3 class="card-title">Dr. Love</h3>
+                    <p class="card-text">Date: January 1, 2023</p>
+                    <p class="card-text">Psalm 147.</p>
+                    <a href="blog1.html" class="btn btn-primary">Read More</a>
+                </div>
+            </div>
+        </div>
+
+              <div class="col-md-4 mb-4">
+            <div class="card">
+                <img src="bible.jpg" class="card-img-top" alt="Sermon 1">
+                <div class="card-body">
+                    <h3 class="card-title">God Is</h3>
+                    <p class="card-text">Date: March 1, 2023</p>
+                    <p class="card-text">What God is all About.</p>
+                    <a href="blog2.html" class="btn btn-primary">Read More</a>
+                </div>
+            </div>
+        </div>
+        
+                <div class="col-md-4 mb-4">
+            <div class="card">
+                <img src="bible.jpg" class="card-img-top" alt="Sermon 1">
+                <div class="card-body">
+                    <h3 class="card-title">Weak Man, Deep Faith, Strong God</h3>
+                    <p class="card-text">Date: July 1, 2023</p>
+                    <p class="card-text">Genesis 22.</p>
+                    <a href="blog3.html" class="btn btn-primary">Read More</a>
+                </div>
+            </div>
+        </div>  
+        <!-- Sermon Card 2 (repeat structure for additional sermons) -->
+    </div>
+</section>
+
+<!-- Main Page Content -->
+<div id="home">
+    <!-- Other content on your main page -->
+
+    <!-- Donate Section -->
+    <section id="donate" class="container my-5 text-center">
+        <h2>Support Our Mission</h2>
+        <p>Your donations help us make a difference.</p>
+        <a href="donate.html" class="btn btn-primary">Donate Now</a>
+    </section>
+</div>
+
+
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact-section custom-contact-section">
+    <div class="container">
+      <h2 class="mb-4">Get in Touch</h2>
+      <p class="lead">Feel free to reach out for collaboration and inquiries.</p>
+      <p>Email: <a href="mailto:jmusunguus@gmail.com">jmusunguus@gmail.com</a></p>
+      <p>Mobile: <a href="tel:+254722238438" style="color: #99ff33;">+254 722 238 438</a></p>
+      <p>Mobile: <a href="tel:+254720701989" style="color: #99ff33;">+254 720 701 989</a></p>
+      <div class="Whatsapp text-center">
+        <i class="fab fa-whatsapp fa-2x"></i>
+        <a href="tel:+254722238438, tel:+254720701989" target="_blank">Whatsapp</a>
+          <!-- Add more contact information as needed -->
+    </div>
+     <div class="facebook">
+        <i class="fab fa-facebook fa-2x"></i>
+        <a href="https://www.facebook.com/your-facebook-page-url" target="_blank">Facebook</a>
+    </div>
+  </section>
+
+
+  <!-- Footer Section -->
+  <footer class="bg-dark text-white text-center py-3">
+    <div class="container">
+      <p aria-label="Copyright notice">&copy; 2023 Deliverance Church Mateka. All rights reserved.</p>
+    </div>
+  </footer>
+
+   <!-- Add Bootstrap and jQuery scripts here -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="dcmateka.js"></script>
+    <script type="module">
+  // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.3.0/firebase-app.js";
+  import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.3.0/firebase-analytics.js";
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
+
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  const firebaseConfig = {
+    apiKey: "AIzaSyAU_ByfiDRxmhP8pm7pKDOv-Jk96u_cT6Q",
+    authDomain: "dc-mateka.firebaseapp.com",
+    projectId: "dc-mateka",
+    storageBucket: "dc-mateka.appspot.com",
+    messagingSenderId: "93385161464",
+    appId: "1:93385161464:web:c7fba8233f39df8c18190d",
+    measurementId: "G-8XV8T1TL9E"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const analytics = getAnalytics(app);
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const loadEl = document.querySelector('#load');
+        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
+        // // The Firebase SDK is initialized and available here!
+        //
+        // firebase.auth().onAuthStateChanged(user => { });
+        // firebase.database().ref('/path/to/ref').on('value', snapshot => { });
+        // firebase.firestore().doc('/foo/bar').get().then(() => { });
+        // firebase.functions().httpsCallable('yourFunction')().then(() => { });
+        // firebase.messaging().requestPermission().then(() => { });
+        // firebase.storage().ref('/path/to/ref').getDownloadURL().then(() => { });
+        // firebase.analytics(); // call to activate
+        // firebase.analytics().logEvent('tutorial_completed');
+        // firebase.performance(); // call to activate
+        //
+        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
+
+        try {
+          let app = firebase.app();
+          let features = [
+            'auth', 
+            'database', 
+            'firestore',
+            'functions',
+            'messaging', 
+            'storage', 
+            'analytics', 
+            'remoteConfig',
+            'performance',
+          ].filter(feature => typeof app[feature] === 'function');
+          loadEl.textContent = `Firebase SDK loaded with ${features.join(', ')}`;
+        } catch (e) {
+          console.error(e);
+          loadEl.textContent = 'Error loading the Firebase SDK, check the console.';
+        }
+      });
+    
+</script>
+
+
+</html>

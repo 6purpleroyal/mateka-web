@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="Deliverance Church Mateka Portfolio.">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <title>Deliverance Church - Mateka</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.1/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.1/ScrollTrigger.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
+  <style>
+  #donate {
+  background-image: url('home-bg.jpg'); /* Replace 'your-image.jpg' with your image file path */
+  background-size: cover;
+  background-position: center;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  display: block;
+}
+
+  /* Header Styles */
+
+.donations-intro-text {
+  text-align: center; /* Center-align the text horizontally */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%; /* Make sure the text takes up the full height of the hero section */
+}
+
+  .role.hero-text {
+    font-size: 40px;
+    font-weight: bold;
+    color: purple;
+    margin-top: 50px;
+  }
+
+  .role-verse {
+    font-size: 18px;
+    color: purple;
+    font-style: italic;
+    margin-top: 10px;
+  }
+
+/* Style for Donation Options Section */
+.donation-options {
+  background-color: #008080;
+}
+
+.donation-option-card {
+  background-color: powderblue;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.donation-option-card h3 {
+  font-size: 24px;
+}
+
+.donation-option-card p {
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+.donation-option-card button {
+  margin-top: 20px;
+}
+
+/* Style for Donation Form Section */
+.donation-form label {
+  font-weight: bold;
+}
+
+.donation-form .form-control {
+  margin-bottom: 20px;
+}
+
+.donation-form button {
+  margin-top: 20px;
+}
+
+
+  </style>
+  </head>
+
+<!-- Navigation Bar -->
+ 
+    <!-- Navbar content with navigation links -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="#home">Deliverance Church - Mateka</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="about.html">About us</a></li>
+            <li class="nav-item"><a class="nav-link" href="sermons.html">Sermons</a></li>
+            <!-- <li class="nav-item"><a class="nav-link" href="#events">Events</a></li> -->
+            <li class="nav-item"><a class="nav-link" href="ministries.html">Ministries</a></li>
+            <li class="nav-item"><a class="nav-link" href="donate.html">Give</a></li>
+            <li class="nav-item"><a class="nav-link" href="visit.html">Visit Us</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+
+  <!-- Hero Section -->
+  <section id="donate" class="bg-light text-white text-center py-5 fullscreen-hero">
+    <div class="donations-intro-text">
+      <h1 class="name hero-text">Support Us<h1>
+      <p class="role hero-text">Whoever is generous to the poor lends to the Lord, and he will repay him for his deed</p>
+      <p class="role-verse">Proverbs 19:17</p>
+    </div>  
+  </section>
+
+  <!-- Donation Options Section -->
+<section class="donation-options py-5">
+  <div class="container text-center">
+    <h2>Choose Your Donation Option</h2>
+    <div class="row mt-4">
+      <div class="col-md-4">
+        <div class="donation-option-card">
+          <h3>One-Time Donation</h3>
+          <p>Make a single, one-time donation to support our mission.</p>
+          <button class="btn btn-primary">Donate Now</button>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="donation-option-card">
+          <h3>Monthly Giving</h3>
+          <p>Join our monthly giving program to provide ongoing support.</p>
+          <button class="btn btn-primary">Join Now</button>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="donation-option-card">
+          <h3>Specific Campaign</h3>
+          <p>Contribute to a specific campaign or cause close to your heart.</p>
+          <button class="btn btn-primary">Donate to Campaign</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Donation Form Section -->
+<section class="donation-form py-5">
+  <div class="container">
+    <h2>Make Your Donation</h2>
+    <form id="donation-form" action="process_donation.php" method="POST">
+      <div class="form-group">
+        <label for="amount">Donation Amount</label>
+        <input type="text" id="amount" name="amount" class="form-control" placeholder="$" required>
+      </div>
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" class="form-control" required>
+      </div>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" class="form-control" required>
+      </div>
+      <div class="form-group">
+        <label for="payment-method">Payment Method</label>
+        <select id="payment-method" name="payment-method" class="form-control" required>
+          <option value="credit-card">Credit Card</option>
+          <option value="paypal">PayPal</option>
+        </select>
+      </div>
+      <button type="submit" class="btn btn-primary">Donate Now</button>
+    </form>
+  </div>
+</section>
+
+
+  <!-- Footer Section -->
+  <footer class="bg-dark text-white text-center py-3">
+    <div class="container">
+      <p aria-label="Copyright notice">&copy; 2023 Deliverance Church Mateka. All rights reserved.</p>
+    </div>
+  </footer>
+
+   <!-- Add Bootstrap and jQuery scripts here -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="dcmateka.js"></script>
+</html>
+

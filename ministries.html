@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Include Bootstrap CSS and your custom CSS -->
+    <meta charset="UTF-8">
+    <meta name="description" content="Your personal portfolio showcasing your data science journey.">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.1/ScrollTrigger.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.5.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Ministries Section */
+.ministries-section {
+  background-color: #008080; /* Change to your desired background color */
+  padding: 50px 0;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  display: block;
+}
+
+/* Center the project cards */
+.ministries-section .row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Change the background color of the project cards */
+.ministries-section .ministries-card {
+  background-color: #e6e6e6; /* Change to your desired card background color */
+  margin: 20px;
+  border-radius: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  height: 300px; /* Adjust height as needed */
+  perspective: 1000px;
+  position: relative;
+}
+
+.ministries-section .card-front,
+.ministries-section .card-back {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  transition: transform 0.5s;
+  backface-visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+}
+
+.ministries-section .card-front {
+  background-color: #f0f0f0; /* Add your background color */
+}
+
+.ministries-section .card-back {
+  background-color: #6dffff; /* Add your background color */
+  transform: rotateY(180deg);
+}
+
+.ministries-section .ministries-card:hover .card-front {
+  transform: rotateY(180deg);
+}
+
+.ministries-section .ministries-card:hover .card-back {
+  transform: rotateY(0deg);
+}
+
+.ministries-section .card-title {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.ministries-section .btn-primary {
+  background-color: #007bff; /* Customize your button color */
+  color: #fff;
+  transition: background-color 0.3s;
+}
+
+.ministries-section .btn-primary:hover {
+  background-color: #0056b3; /* Change the hover color */
+}
+
+/* Change the background color of the entire section */
+.ministries-section h2 {
+  color: #fff; /* Change to your desired text color */
+  text-align: center;
+  margin-bottom: 5px;
+  margin-top: 50px;
+}
+
+/* Change the background color of the entire section */
+.ministries-section p {
+  color: #666; /* Change to your desired text color */
+  text-align: left;
+  margin-bottom: 5px;
+}
+
+/* Change the background color of the entire section */
+.ministries-section h5 {
+  color: #666; /* Change to your desired text color */
+  text-align: left;
+  margin-bottom: 5px;
+}
+
+
+/* Custom CSS for Sermon Cards */
+.card {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    transition: transform 0.2s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.card-text {
+    color: #555;
+    font-size: 0.875rem;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    border: none;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+}
+
+    </style>
+
+</head>
+<body>
+    <!-- Navigation Bar -->
+ 
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="#home">Deliverance Church - Mateka</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="about.html">About us</a></li>
+            <li class="nav-item"><a class="nav-link" href="sermons.html">Sermons</a></li>
+            <!-- <li class="nav-item"><a class="nav-link" href="#events">Events</a></li> -->
+            <li class="nav-item"><a class="nav-link" href="ministries.html">Ministries</a></li>
+            <li class="nav-item"><a class="nav-link" href="donate.html">Give</a></li>
+            <li class="nav-item"><a class="nav-link" href="visit.html">Visit Us</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- Navigation bar and other content (index.html) -->
+
+
+<!-- Hero Section -->
+<section id="Ministries-hero" class="bg-light text-white text-center py-5 fullscreen-hero" style="background-image: url('main-bg.jpg');">
+
+
+    <div class="intro-text">
+        <h1 class="name hero-text">Our Ministries</h1>
+    </div>
+</section>
+    
+<!-- Portfolio Projects Section -->
+<section id="ministries" class="colored-section ministries-section">
+  <div class="container">
+    <h2 class="text-center mb-5">Ministries</h2>
+    <div class="row justify-content-center"> <!-- Center the project cards -->
+      <div class="col-md-4">
+        <div class="ministries-card">
+          <div class="card-front">
+            <h5 class="card-title">Men's Eagles</h5>
+          </div>
+          <div class="card-back">
+            <p class="card-text">Learn More</p>
+            <a href="eagles.html" class="btn btn-primary">More</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="ministries-card">
+          <div class="card-front">
+            <h5 class="card-title">Daughters of Faith</h5>
+          </div>
+          <div class="card-back">
+            <p class="card-text">Learn More</p>
+            <a href="dof.html" class="btn btn-primary">More</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="ministries-card">
+          <div class="card-front">
+            <h5 class="card-title">Youth Ministry</h5>
+          </div>
+          <div class="card-back">
+            <p class="card-text">Learn More</p>
+            <a href="youth.html" class="btn btn-primary">More</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="ministries-card">
+          <div class="card-front">
+            <h5 class="card-title">Children's Ministry</h5>
+          </div>
+          <div class="card-back">
+            <p class="card-text">Learn More</p>
+            <a href="children.html" class="btn btn-primary">More</a>
+          </div>
+        </div>
+      </div>
+
+
+    <div class="col-md-4">
+        <div class="ministries-card">
+          <div class="card-front">
+            <h5 class="card-title">Life Group</h5>
+          </div>
+          <div class="card-back">
+            <p class="card-text">Learn More</p>
+            <a href="lg.html" class="btn btn-primary">More</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+    <!-- Footer and other content (index.html) -->
+
+  <!-- Footer Section -->
+  <footer class="bg-dark text-white text-center py-3">
+    <div class="container">
+      <p aria-label="Copyright notice">&copy; 2023 Deliverance Church Mateka. All rights reserved.</p>
+    </div>
+  </footer>    
+
+    <!-- Include Bootstrap JS and your custom JavaScript if needed -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.5.0/dist/js/bootstrap.min.js"></script>
+</body>
+</html>

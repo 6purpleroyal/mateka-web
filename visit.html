@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="Deliverance Church Mateka Portfolio.">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <title>Deliverance Church - Mateka</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.1/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.1/ScrollTrigger.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #008080;
+            color: #333;
+        }
+        header {
+            background-color: #008080;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        .container-visit {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            color: #fFF;
+        }
+
+        h2 {
+            margin-top: 20px;
+        }
+
+        .address {
+            margin-top: 10px;
+        }
+
+        #map {
+            width: 100%;
+            height: 300px;
+            margin-top: 20px;
+        }
+        .contact-info {
+            margin-top: 20px;
+        }
+        .hours {
+            margin-top: 20px;
+        }
+        
+#visit-us {
+  background-image: url('sermons2-bg.jpg'); /* Replace 'your-image.jpg' with your image file path */
+  background-size: cover;
+  background-position: center;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  display: block;
+}
+
+  /* Header Styles */
+
+.visit-us-intro-text {
+  font-size: 60px;
+  color: white;  
+  text-align: center; /* Center-align the text horizontally */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%; /* Make sure the text takes up the full height of the hero section */
+}
+
+
+    </style>
+</head>
+
+<!-- Navigation Bar -->
+ 
+    <!-- Navbar content with navigation links -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="#home">Deliverance Church - Mateka</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="about.html">About us</a></li>
+            <li class="nav-item"><a class="nav-link" href="sermons.html">Sermons</a></li>
+            <!-- <li class="nav-item"><a class="nav-link" href="#events">Events</a></li> -->
+            <li class="nav-item"><a class="nav-link" href="ministries.html">Ministries</a></li>
+            <li class="nav-item"><a class="nav-link" href="donate.html">Give</a></li>
+            <li class="nav-item"><a class="nav-link" href="visit.html">Visit Us</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+ <!-- Hero Section -->
+  <section id="visit-us" class="bg-light text-white text-center py-5 fullscreen-hero">
+    <div class="visit-us-intro-text">
+      <h1 class="name hero-text">Visit Us</h1>
+    
+    </div>  
+  </section>
+ 
+
+<body>
+    <header>
+        <h1>Welcome to Our Church</h1>
+    </header>
+    <div class="container-visit">
+        <h2>Address</h2>
+        <p class="address">
+            Mateka Market<br>
+            Mateka, Bungoma County<br>
+            Kenya
+        </p>
+
+        <h2>Map</h2>
+        <div id="map"></div>
+
+        <h2>Contact Information</h2>
+        <p class="contact-info">
+            <!--Phone: +254 722 238 438<br>
+            Email: jmusunguus@gmail.com -->
+            <p>Mobile: <a href="tel:+254722238438" style="color: darkblue;">+254 722 238 438</a></p>
+            <p>Email: <a href="mailto:jmusunguus@gmail.com">jmusunguus@gmail.com</a></p>
+        </p>
+
+        <h2>Hours of Operation</h2>
+        <p class="hours">
+            Monday - Friday: 5:30 AM - 7:30 AM<br>
+            Wednesday: 5:00 PM - 7:00 PM<br>
+            Sunday: 8:30 AM - 12:00 PM
+        </p>
+    </div>
+
+    <!-- JavaScript for Google Maps -->
+    <script>
+        function initMap() {
+            // Create a map centered on your location
+            var map = new google.maps.Map(document.getElementById('map'), {
+                center: {lat: 0.5357866831953038, lng: 34.50020269325219}, // Replace with your latitude and longitude
+                zoom: 15 // Adjust the zoom level
+            });
+
+
+            // Add a marker for your location
+            var marker = new google.maps.Marker({
+                position: {lat: 0.5357866831953038, lng: 34.50020269325219}, // Replace with your latitude and longitude
+                map: map,
+                title: 'Our Location'
+            });
+        }
+    </script>
+    <!-- Include the Google Maps API script here -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDPwZ69UBNklm2UNeS-JOBP5HhiWjeindo&callback=initMap" async defer></script>
+    <!--<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDPwZ69UBNklm2UNeS-JOBP5HhiWjeindo&libraries=places"></script> -->
+    
+          <!-- Footer Section -->
+    <footer class="bg-dark text-white text-center py-3">
+    <div class="container">
+      <p aria-label="Copyright notice">&copy; 2023 Deliverance Church Mateka. All rights reserved.</p>
+    </div>
+  
+    </footer>
+</body>
+</html>
+
+
+
+

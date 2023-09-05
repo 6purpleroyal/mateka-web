@@ -1,0 +1,158 @@
+/* Global Styles */
+body {
+  font-family: Caudex, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  font-weight: 400;
+  color: #f2f2f2;
+ } 
+
+
+/* Hero Section Background Image */
+#home {
+  background-image: url('home-bg.jpg'); /* Replace 'your-image.jpg' with your image file path */
+  background-size: cover;
+  background-position: center;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  display: block;
+}
+
+  /* Header Styles */
+.home-intro-text {
+  text-align: center;
+  margin-top: 10px;
+}
+
+/* Name and Role */
+.name {
+  font-family: "Quicksand", sans-serif;
+  font-size: 76px;
+  font-weight: 500;
+  color: white;
+  margin-bottom: 5px;
+}
+
+.role {
+  font-size: 66px;
+  color: white;
+  font-style: italic;
+}
+
+.title-verse {
+  font-size: 30px;
+  color: white;
+  font-style: italic;
+}
+
+/* Subtitle */
+.subtitle {
+  font-size: 55px;
+  color: #001f3f;
+  line-height: 1.1;
+  padding: 10px;
+  text-align: center;
+  letter-spacing: -0.5px;
+}
+
+/* Add a class to target the hero text and subtitle */
+.hero-text {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeIn 3s ease forwards;
+}
+
+/* Define the fadeIn animation */
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Contact Section */
+.custom-contact-section {
+  background-color: #008080;
+  padding: 50px 0;
+  text-align: center;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  display: block;
+}
+
+.custom-contact-section a {
+  color: #99ff33;
+}
+
+.custom-contact-section i{
+  margin-top: 5px;
+  color: limegreen;
+}
+
+/* Footer Section */
+.footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+  display: block;
+}
+
+.footer p {
+  margin: 0;
+}
+
+/* Center the About Us title */
+h1.text-center {
+    text-align: center;
+}
+
+/* Set flex properties for the sections */
+.image-slider {
+    flex: 1;
+}
+
+.event-boxes {
+    flex: 1;
+}
+
+/* Style the event boxes */
+.event-box {
+    background-color: #f5f5f5;
+    border-radius: 20px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.event-box i {
+    font-size: 24px;
+    color: #007bff; /* Blue color, you can change this */
+}
+
+.event-box h3 {
+    margin-top: 10px;
+    font-size: 18px;
+}
+
+.event-box p {
+    font-size: 14px;
+    color: #333;
+}
+
+/* CSS for Fullscreen Hero Section */
+.fullscreen-hero {
+    height: 100vh; /* Set the height to 100% of the viewport height */
+    background-image: url('your-hero-background.jpg'); /* Add your hero background image */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+
+
+
+

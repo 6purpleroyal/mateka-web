@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="Deliverance Church Mateka Portfolio.">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <title>Deliverance Church - Mateka</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.1/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.1/ScrollTrigger.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+  <style>
+      /* Style the section title */
+#sermons h2 {
+    font-size: 32px;
+    color: #333;
+}
+
+/* Style the background color of the sermons section */
+#sermons {
+    background-color: #008080; /* Replace with your desired background color */
+    padding: 20px; /* Add some padding to the top and bottom for spacing */
+    border-radius: 10px;
+}
+
+
+/* Style the sermon cards */
+.card {
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.card-text {
+    font-size: 16px;
+    color: #666;
+}
+
+.card-img-top {
+    max-height: 200px;
+    object-fit: cover;
+}
+
+/* Style the "Read More" button */
+.btn-primary {
+    background-color: #007bff;
+    color: #fff;
+    transition: background-color 0.2s;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+}
+
+  </style>
+</head>
+
+<!-- Navigation Bar -->
+ 
+    <!-- Navbar content with navigation links -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="#home">Deliverance Church - Mateka</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="about.html">About us</a></li>
+            <li class="nav-item"><a class="nav-link" href="sermons.html">Sermons</a></li>
+            <!-- <li class="nav-item"><a class="nav-link" href="#events">Events</a></li> -->
+            <li class="nav-item"><a class="nav-link" href="ministries.html">Ministries</a></li>
+            <li class="nav-item"><a class="nav-link" href="donate.html">Give</a></li>
+            <li class="nav-item"><a class="nav-link" href="visit.html">Visit Us</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+
+  <!-- Hero Section -->
+<!-- Hero Section -->
+<section id="sermons" class="bg-light text-white text-center py-5 fullscreen-hero" style="background-image: url('sermons-bg.jpg');">>
+    <div class="intro-text">
+        <h1 class="name hero-text">Learn God's Word</h1>
+    </div>
+</section>
+
+
+<body>
+    <!-- Sermon Content -->
+    <section id="sermons" class="container my-5">
+    <h2 class="text-center mb-4">Sermons</h2>
+
+    <div class="row">
+        <!-- Sermon Card 1 -->
+        <div class="col-md-4 mb-4">
+            <div class="card">
+                <img src="bible.jpg" class="card-img-top" alt="Sermon 1">
+                <div class="card-body">
+                    <h3 class="card-title">Dr. Love</h3>
+                    <p class="card-text">Date: January 1, 2023</p>
+                    <p class="card-text">Psalm 147.</p>
+                    <a href="blog1.html" class="btn btn-primary">Read More</a>
+                </div>
+            </div>
+        </div>
+
+              <div class="col-md-4 mb-4">
+            <div class="card">
+                <img src="bible.jpg" class="card-img-top" alt="Sermon 1">
+                <div class="card-body">
+                    <h3 class="card-title">God Is</h3>
+                    <p class="card-text">Date: March 1, 2023</p>
+                    <p class="card-text">What God is all About.</p>
+                    <a href="blog2.html" class="btn btn-primary">Read More</a>
+                </div>
+            </div>
+        </div>
+        
+                <div class="col-md-4 mb-4">
+            <div class="card">
+                <img src="bible.jpg" class="card-img-top" alt="Sermon 1">
+                <div class="card-body">
+                    <h3 class="card-title">Weak Man, Deep Faith, Strong God</h3>
+                    <p class="card-text">Date: July 1, 2023</p>
+                    <p class="card-text">Genesis 22.</p>
+                    <a href="blog3.html" class="btn btn-primary">Read More</a>
+                </div>
+            </div>
+        </div>  
+        <!-- Sermon Card 2 (repeat structure for additional sermons) -->
+    </div>
+</section>
+
+  <!-- Footer Section -->
+  <footer class="bg-dark text-white text-center py-3">
+    <div class="container">
+      <p aria-label="Copyright notice">&copy; 2023 Deliverance Church Mateka. All rights reserved.</p>
+    </div>
+  </footer>
+
+   <!-- Add Bootstrap and jQuery scripts here -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="dcmateka.js"></script>
+    <!-- Footer and other content (include navigation back to the Sermons page) -->
+
+    <!-- Include Bootstrap JS and your custom JavaScript if needed -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.5.0/dist/js/bootstrap.min.js"></script>
+</body>
+</html>
