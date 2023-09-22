@@ -1,21 +1,240 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="UTF-8">
-  <meta name="description" content="Deliverance Church Mateka Portfolio.">
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
-  <title>Deliverance Church - Mateka</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.1/gsap.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.1/ScrollTrigger.min.js"></script>
-  <link rel="stylesheet" type="text/css" href="styles.css">
-  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
-  <style>
+	<meta name="author" content="Romanov O'connor">
+	<meta name="description" content="Deliverance Church Mateka Portfolio.">
+  	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  	<title>Deliverance Church - Mateka</title>
+  	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  	<link rel="stylesheet" type="text/css" href="styles.css">
+  	<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+</head>
+<body>
+	<style>
+  @import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900&display=swap');
+
+* {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: #3d535f;
+}
+
+section {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+section .reveal {
+  position: relative;
+  color: #fff;
+  font-size: 2.5em;
+  padding: 0 10px;
+  font-weight: 500;
+  transform-origin: left;
+  transform: scaleX(0);
+  transition: 0.5s;
+  transition-delay: 0.5s;
+}
+
+section .reveal.active {
+  transform: scaleX(1);
+  transition-delay: 0s;
+}
+
+section .reveal:nth-child(2) {
+  font-weight: 300;
+  font-size: 1.5em;
+  letter-spacing: 2px;
+  margin-top: 5px;
+  display: inline-block;
+}
+
+section .reveal:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #e02bff;
+  transform-origin: right;
+  transition: 0.5s;
+  transition-delay: 0s;
+}
+
+section .reveal:nth-child(2):before {
+  background: #ffeb3b;
+}
+
+section .reveal.active:before {
+  transform: scaleX(0);
+  transition-delay: 0.5s;
+}
+
+section img {
+  position: relative;
+  left: -100px;
+  display: block;
+  margin-left: 10px;
+  margin-top: 20px;
+  max-width: 300px;
+  opacity: 0;
+  transition: 0.5s;
+}
+
+section img.active {
+  left: 0;
+  opacity: 1;
+}
+
+section h3 {
+  display: flex;
+  font-size: 36px;
+  font-weight: 400;
+  color: #fff;
+  margin-left: 350px;
+  text-align: left;
+}
+
+section p {
+  display: flex;
+  font-size: 24px;
+  font-weight: 200;
+  color: #fff;
+  margin-left: 350px;
+}
+
+.us h4{
+  text-align: left;
+}
+
+/* Additional styles for the new card */
+.about-card {
+  background: linear-gradient(to bottom, #f5f5f5, #e0e0e0);
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  border-radius: 5px;
+  margin-top: 20px;
+  animation: fadeIn is ease;
+}
+
+.about-card h3 {
+  color: #333;
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.about-card p {
+  color: #333;
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+
+.about-card ul {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+.about-card li {
+  margin-bottom: 8px;
+  font-size: 1rem;
+  color: #555;
+}
+
+.goals {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.goals h4 {
+  color: #333;
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.goals p {
+  font-size: 1rem;
+  color: #555;
+  margin: 0;
+}
+
+.goals ul {
+  list-style-type: disc;
+  padding-left: 20px;
+  margin-top: 10px;
+}
+
+.goals li{
+  transform: translateX(-10px); /* Slide in from the left (negative value) */
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  opacity: 0; /* Start with opacity 0 for the fade-in effect */
+  animation: fadeInAndSlideIn 1s ease forwards; /* Apply the keyframe animation */
+}
+
+/* Keyframes to make the ease-in effect visible */
+@keyframes fadeInAndSlideIn {
+  0% {
+    opacity: 0;
+    transform: translateX(-20px); /* Start further to the left */
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0); /* End at the original position */
+  }
+}
+
+.goals ul li {
+  margin-bottom: 8px;
+  font-size: 1rem;
+  color: #555;
+}
+
+
+.goals h4 {
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  animation: fadeInAndSlideIn 1s ease both; /* Apply the keyframe animation */
+}
+
+/* Keyframes to make the ease-in effect visible */
+@keyframes fadeInAndSlideIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Footer Section */
+.footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+  display: block;
+}
+
+.footer p {
+  margin: 0;
+}
 #about-us{
-  background-image: url('seas.jpg'); /* Replace 'your-image.jpg' with your image file path */
+  background-image: url('about1.jpg'); /* Replace 'your-image.jpg' with your image file path */
   background-size: cover;
   background-position: center;
   margin-bottom: 20px;
@@ -24,9 +243,7 @@
   justify-content: center;
   align-items: center; /* Center vertically */
   height: 100vh; /* Make sure the section takes up the full viewport height */
-
 }
-
 #about-us h1 {
   font-size: 60px;
   color: white; /* You can customize the color here */
@@ -34,73 +251,109 @@
 }
 
 
-
-.about-us-container {
-    text-align: center;
-    padding: 20px;
-    background-color: #008080;
-    border-radius: 20px;
-    margin-bottom: 20px;
-}
-
-.team-member {
-    text-align: center;
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    transition: transform 0.2s ease-in-out;
-}
-
-.team-member:hover {
-    transform: scale(1.05);
-}
-
-.team-member img {
-    max-width: 100%;
-    border-radius: 50%;
-}
-
-.name {
-    font-size: 18px;
-    font-weight: bold;
-    color: #333;
-    margin-top: 10px;
-}
-
-.title {
-    font-size: 14px;
-    color: #666;
-}
-
 </style>
-</head>
 
-<!-- Navigation Bar -->
- 
-    <!-- Navbar content with navigation links -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
-      <div class="container">
-        <a class="navbar-brand" href="#home">Deliverance Church - Mateka</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-            <li class="nav-item"><a class="nav-link" href="about.html">About us</a></li>
-            <li class="nav-item"><a class="nav-link" href="sermons.html">Sermons</a></li>
-            <!-- <li class="nav-item"><a class="nav-link" href="#events">Events</a></li> -->
-            <li class="nav-item"><a class="nav-link" href="ministries.html">Ministries</a></li>
-            <li class="nav-item"><a class="nav-link" href="donate.html">Give</a></li>
-            <li class="nav-item"><a class="nav-link" href="visit.html">Visit Us</a></li>
-          </ul>
-        </div>
+   <!-- Navigation Bar -->
+   <nav class="navbar navbar-expand-lg navbar-light custom-navbar">
+    <div class="container">
+      <a class="navbar-brand" href="#home">Deliverance Church - Mateka</a>
+      <button class="navbar-toggler" type="button" data-toggle="offcanvas" data-target="#offcanvas"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">
+              <i class="fas fa-home"></i> Home
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">
+              <i class="fas fa-info-circle"></i> About us
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="index.html#sermons">
+              <i class="fas fa-microphone"></i> Sermons
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="index.html#events">
+              <i class="fas fa-calendar-alt"></i> Events
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="ministries.html">
+              <i class="fas fa-church"></i> Ministries
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="donate.html">
+              <i class="fas fa-donate"></i> Give
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="visit.html">
+              <i class="fas fa-map-marker-alt"></i> Visit Us
+            </a>
+          </li>
+        </ul>
       </div>
-    </nav>
+    </div>
+  </nav>
+  
+  <!-- Add this code below your existing navigation bar -->
+  
+  <div id="offcanvas" class="offcanvas">
+    <div class="offcanvas-header">
+      <button type="button" class="close" data-dismiss="offcanvas" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="offcanvas-body">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">
+            <i class="fas fa-home"></i> Home
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="about.html">
+            <i class="fas fa-info-circle"></i> About us
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="index.html#sermons">
+            <i class="fas fa-microphone"></i> Sermons
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="index.html#events">
+            <i class="fas fa-calendar-alt"></i> Events
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="ministries.html">
+            <i class="fas fa-church"></i> Ministries
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="donate.html">
+            <i class="fas fa-donate"></i> Give
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="visit.html">
+            <i class="fas fa-map-marker-alt"></i> Visit Us
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  
 
-
+    
   <!-- Hero Section -->
   <section id="about-us" class="bg-light text-white text-center py-5 fullscreen-hero">
     <div class="about-intro-text">
@@ -111,55 +364,122 @@
 
   </section>
 
-    <section class="about-us">
-        <div class="about-us-container">
-            <h2>Meet Our Team</h2>
-            <div class="row">
-                <div class="col-md-3">
-                    <div class="team-member">
-                        <img src="about2.jpg" alt="Member 1">
-                        <p class="name">Pst. Joseph Musungu</p>
-                        <p class="title">Host Pastor</p>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="team-member">
-                        <img src="about2.jpg" alt="Member 2">
-                        <p class="name">Pst. Esther Musungu</p>
-                        <p class="title">Assistant Pastor</p>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="team-member">
-                        <img src="about2.jpg" alt="Member 3">
-                        <p class="name">Rev. Jackson Ongeri</p>
-                        <p class="title">Western Region Overseer</p>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="team-member">
-                        <img src="about2.jpg" alt="Member 4">
-                        <p class="name">Pst. Bramwel Malanga</p>
-                        <p class="title">Overseer</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
 
-    <!-- Linking to the Main Page -->
-  <!-- Footer Section -->
+	
+  <section class="us">
+    <div class="about-card">
+      <div class="goals">
+      <h4>VISION</h4>
+      <ul style="list-style-type: square;">
+        <li>The Church of choice transforming Nations for Jesus Christ</li>
+      </ul>
+      <h4>MISSION</h4>
+      <ul style="list-style-type: square;">
+        <li>To reach out, equip, and affect generations with the gospel of Jesus Christ.</li>
+      </ul>
+      <h4>CORE VALUES</h4>
+      <ul style="list-style-type: square;">
+        <li>Hospitality</li>
+        <li>Excellence</li>
+        <li>Teamwork</li>
+        <li>Transparency</li>
+        <li>Accountability</li>
+      </ul>
+      <h4>OBJECTIVES</h4>
+      <ol type="i">
+        <li>To preach and promote the gospel of Jesus Christ through evangelism and discipleship</li>
+        <li>To raise funds locally and internationally to achieve the church objectives</li>
+        <li>To promote social welfare and concern within the community through households care support</li>
+        <li>To establish and manage academic institutions</li>
+        <li>To establish and manage health facilities</li>
+      </ol>
+      <h4>Responsibilities of the Local Church Council</h4>
+      <ol type="1">
+        <li>Opening, running, and closing of the church bank accounts.</li>
+        <li>Ensure updated audited books of accounts are maintained.</li>
+        <li>Implement the vision, mission, and policy guidelines of the church.</li>
+        <li>Formulating guidelines on the daily running of the church.</li>
+        <li>Advise on the recruitment, employment, remuneration, and discharge of the church staff.</li>
+      </ol>
+      <h4>Church Projects</h4>
+      <ul style="list-style-type: circle;">
+        <li>Purchase of Land</li>
+        <li>Support of Vulnerable Children</li>
+      </ul>
+    </div>
+    </div>
+  </section>
+  
+
+  
+	<section>
+		<div>	
+			<h2 class="reveal">Pastor Joseph Musungu</h2>
+			<h2 class="reveal">Lead Pastor</h2>
+			<img src="dad2.jpeg">
+		</div>
+	</section>
+
+	<section>
+		<div>
+			<h2 class="reveal">Hannington Simiyu</h2>
+			 <h2 class="reveal">Secretary</h2>
+			<img src="c.jpg">
+		</div>
+	</section>
+
+	<section>
+		<div>
+			<h2 class="reveal">Joshua Simiyu</h2>
+			<h2 class="reveal">Treasurer</h2>
+			<img src="c.jpg">
+		</div>
+	</section>
+
+		  <!-- Footer Section -->
   <footer class="bg-dark text-white text-center py-3">
     <div class="container">
       <p aria-label="Copyright notice">&copy; 2023 Deliverance Church Mateka. All rights reserved.</p>
     </div>
   </footer>
+	
+	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>		
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.1/gsap.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.1/ScrollTrigger.min.js"></script>
+  
+  <script>    
+  	const reveal = gsap.utils.toArray('.reveal');
+		reveal.forEach((text, i) => {
+			ScrollTrigger.create({
+				trigger: text,
+				toggleClass: 'active',
+				start: "top 90%",
+				end:"top 20%",
+				// markers: true
+			})
+		})
+  	const images = gsap.utils.toArray('img');
+    images.forEach((img, i) => {
+      ScrollTrigger.create({
+        trigger: img,
+        toggleClass: 'active',
+        start: "top 90%",
+        end:"top 20%",
+        // markers: true
+      })
+    })
+    $('[data-toggle="offcanvas"]').on('click', function () {
+          $('#offcanvas').toggleClass('open');
+      });
+  
+      // Close the off-canvas menu when the close button is clicked
+      $('.offcanvas .close').on('click', function () {
+          $('#offcanvas').removeClass('open');
+      });
+  
+  
+  </script>
 
-   <!-- Add Bootstrap and jQuery scripts here -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script src="dcmateka.js"></script>
 </body>
 </html>
