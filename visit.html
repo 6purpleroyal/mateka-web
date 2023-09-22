@@ -13,105 +13,195 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.1/ScrollTrigger.min.js"></script>
   <link rel="stylesheet" type="text/css" href="styles.css">
   <script src="https://kit.fontawesome.com/a076d05399.js"></script>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #008080;
-            color: #333;
-        }
-        header {
-            background-color: #008080;
-            color: #fff;
-            padding: 20px;
-            text-align: center;
-        }
-        .container-visit {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-            background-color: #fff;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            border-radius: 5px;
-            margin-top: 20px;
-            margin-bottom: 20px;
-        }
+  <style>body{  
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color:  #f6f2e8;
+    color: #333;
+  }
+  
+  header {
+    background-color:  #f6f2e8;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .container-visit {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: gold;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  
+  h1 {
+    color: #3d535f;
+  }
+  
+  h2 {
+    margin-top: 20px;
+  }
+  
+  .address {
+    margin-top: 10px;
+  }
+  
+  #map {
+    width: 100%;
+    height: 300px;
+    margin-top: 20px;
+  }
+  
+  .contact-info {
+    margin-top: 20px;
+  }
+  
+  .hours {
+    margin-top: 20px;
+  }
+  
+  #visit-us {
+    background-image: url('sermons2-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    display: block;
+  }
+  
+  .visit-us-intro-text {
+    font-size: 60px;
+    color: white;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+  
+  .container-visit p {
+    font-size: 1rem;
+  }
+  
+  .container-visit h1 {
+    font-size: 2rem;
+  }
+  
+  .container-visit h2 {
+    font-size: 1.5rem;
+  }
+</style>
 
-        h1 {
-            color: #fFF;
-        }
-
-        h2 {
-            margin-top: 20px;
-        }
-
-        .address {
-            margin-top: 10px;
-        }
-
-        #map {
-            width: 100%;
-            height: 300px;
-            margin-top: 20px;
-        }
-        .contact-info {
-            margin-top: 20px;
-        }
-        .hours {
-            margin-top: 20px;
-        }
-        
-#visit-us {
-  background-image: url('sermons2-bg.jpg'); /* Replace 'your-image.jpg' with your image file path */
-  background-size: cover;
-  background-position: center;
-  margin-bottom: 20px;
-  border-radius: 10px;
-  display: block;
-}
-
-  /* Header Styles */
-
-.visit-us-intro-text {
-  font-size: 60px;
-  color: white;  
-  text-align: center; /* Center-align the text horizontally */
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 100%; /* Make sure the text takes up the full height of the hero section */
-}
-
-
-    </style>
 </head>
 
 <!-- Navigation Bar -->
  
-    <!-- Navbar content with navigation links -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
-      <div class="container">
-        <a class="navbar-brand" href="#home">Deliverance Church - Mateka</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-            <li class="nav-item"><a class="nav-link" href="about.html">About us</a></li>
-            <li class="nav-item"><a class="nav-link" href="sermons.html">Sermons</a></li>
-            <!-- <li class="nav-item"><a class="nav-link" href="#events">Events</a></li> -->
-            <li class="nav-item"><a class="nav-link" href="ministries.html">Ministries</a></li>
-            <li class="nav-item"><a class="nav-link" href="donate.html">Give</a></li>
-            <li class="nav-item"><a class="nav-link" href="visit.html">Visit Us</a></li>
-          </ul>
-        </div>
-      </div>
-    </nav>
+<nav class="navbar navbar-expand-lg navbar-light custom-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="#home">Deliverance Church - Mateka</a>
+    <button class="navbar-toggler" type="button" data-toggle="offcanvas" data-target="#offcanvas"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">
+            <i class="fas fa-home"></i> Home
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="about.html">
+            <i class="fas fa-info-circle"></i> About us
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="index.html#sermons">
+            <i class="fas fa-microphone"></i> Sermons
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="index.html#events">
+            <i class="fas fa-calendar-alt"></i> Events
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="ministries.html">
+            <i class="fas fa-church"></i> Ministries
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="donate.html">
+            <i class="fas fa-donate"></i> Give
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="visit.html">
+            <i class="fas fa-map-marker-alt"></i> Visit Us
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
 
+<!-- Add this code below your existing navigation bar -->
+
+<div id="offcanvas" class="offcanvas">
+  <div class="offcanvas-header">
+    <button type="button" class="close" data-dismiss="offcanvas" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="offcanvas-body">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="index.html">
+          <i class="fas fa-home"></i> Home
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="about.html">
+          <i class="fas fa-info-circle"></i> About us
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="index.html#sermons">
+          <i class="fas fa-microphone"></i> Sermons
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="index.html#events">
+          <i class="fas fa-calendar-alt"></i> Events
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="ministries.html">
+          <i class="fas fa-church"></i> Ministries
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="donate.html">
+          <i class="fas fa-donate"></i> Give
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="visit.html">
+          <i class="fas fa-map-marker-alt"></i> Visit Us
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>
+
+
+    
  <!-- Hero Section -->
   <section id="visit-us" class="bg-light text-white text-center py-5 fullscreen-hero">
     <div class="visit-us-intro-text">
@@ -128,9 +218,13 @@
     <div class="container-visit">
         <h2>Address</h2>
         <p class="address">
+            P.O Box 1320-50200,<br>
+            Bungoma.<br>
+            Kenya.<br>
+            <h2>Physical address:</h2>
             Mateka Market<br>
             Mateka, Bungoma County<br>
-            Kenya
+            Mateka Market Hope Building opposite Samoya Road  
         </p>
 
         <h2>Map</h2>
@@ -148,11 +242,21 @@
         <p class="hours">
             Monday - Friday: 5:30 AM - 7:30 AM<br>
             Wednesday: 5:00 PM - 7:00 PM<br>
-            Sunday: 8:30 AM - 12:00 PM
+            Sunday: 9.00 AM - 12:00 PM<br>
+            Monday to Friday 8.00am to 5.00pm on appointment
         </p>
     </div>
 
+              <!-- Footer Section -->
+    <footer class="bg-dark text-white text-center py-3">
+    <div class="container">
+      <p aria-label="Copyright notice">&copy; 2023 Deliverance Church Mateka. All rights reserved.</p>
+    </div>
+  
+    </footer>
+
     <!-- JavaScript for Google Maps -->
+    
     <script>
         function initMap() {
             // Create a map centered on your location
@@ -168,19 +272,25 @@
                 map: map,
                 title: 'Our Location'
             });
-        }
+          }
+          $(document).ready(function () {
+      $('[data-toggle="offcanvas"]').on('click', function () {
+          $('#offcanvas').toggleClass('open');
+      });
+  
+      // Close the off-canvas menu when the close button is clicked
+      $('.offcanvas .close').on('click', function () {
+          $('#offcanvas').removeClass('open');
+      });
+  });
+    
+  
+
     </script>
     <!-- Include the Google Maps API script here -->
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDPwZ69UBNklm2UNeS-JOBP5HhiWjeindo&callback=initMap" async defer></script>
     <!--<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDPwZ69UBNklm2UNeS-JOBP5HhiWjeindo&libraries=places"></script> -->
     
-          <!-- Footer Section -->
-    <footer class="bg-dark text-white text-center py-3">
-    <div class="container">
-      <p aria-label="Copyright notice">&copy; 2023 Deliverance Church Mateka. All rights reserved.</p>
-    </div>
-  
-    </footer>
 </body>
 </html>
 
