@@ -1,208 +1,269 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="UTF-8">
+  <meta name="author" content="Romanov O'connor">
   <meta name="description" content="Deliverance Church Mateka Portfolio.">
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
   <title>Deliverance Church - Mateka</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.1/gsap.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.1/ScrollTrigger.min.js"></script>
   <link rel="stylesheet" type="text/css" href="styles.css">
-  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
-  
-    <style media="screen">
-      body { background: #ECEFF1; color: rgba(0,0,0,0.87); font-family: Roboto, Helvetica, Arial, sans-serif; margin: 0; padding: 0; }
-      #message { background: white; max-width: 360px; margin: 100px auto 16px; padding: 32px 24px; border-radius: 3px; }
-      #message h2 { color: #ffa100; font-weight: bold; font-size: 16px; margin: 0 0 8px; }
-      #message h1 { font-size: 22px; font-weight: 300; color: rgba(0,0,0,0.6); margin: 0 0 16px;}
-      #message p { line-height: 140%; margin: 16px 0 24px; font-size: 14px; }
-      #message a { display: block; text-align: center; background: #039be5; text-transform: uppercase; text-decoration: none; color: white; padding: 16px; border-radius: 4px; }
-      #message, #message a { box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24); }
-      #load { color: rgba(0,0,0,0.4); text-align: center; font-size: 13px; }
-      @media (max-width: 600px) {
-        body, #message { margin-top: 0; background: white; box-shadow: none; }
-        body { border-top: 16px solid #ffa100; }
-      }
-
-      #sermons h2 {
-    font-size: 32px;
-    color: white;
-}
-
-/* Style the background color of the sermons section */
-#sermons {
-    background-color: #008080; /* Replace with your desired background color */
-    padding: 60px 0; /* Add some padding to the top and bottom for spacing */
-    border-radius: 10px;
-}
-
-
-/* Style the sermon cards */
-.card {
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transition: transform 0.2s;
-}
-
-.card:hover {
-    transform: translateY(-5px);
-}
-
-.card-title {
-    font-size: 24px;
-    font-weight: bold;
-    margin-bottom: 10px;
-    color: #333;
-}
-
-.card-text {
-    font-size: 16px;
-    color: #666;
-}
-
-.card-img-top {
-    max-height: 200px;
-    object-fit: cover;
-}
-
-/* Style the "Read More" button */
-.btn-primary {
-    background-color: #007bff;
-    color: #fff;
-    transition: background-color 0.2s;
-}
-
-.btn-primary:hover {
-    background-color: #0056b3;
-}
-
-/* Style the background color of the events section */
-#events {
-    background-color: #008080; /* Replace with your desired background color */
-    color: #fff; /* Set text color to white */
-    padding: 60px 0; /* Add padding to the top and bottom of the section */
-    margin-bottom: 20px;
-    border-radius: 10px;
-}
-
-/* Style the event boxes */
-.event-boxes {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
-
-.event-box {
-    background-color: #fff; /* Background color for each event box */
-    border-radius: 10px;
-    padding: 20px;
-    width: calc(33.33% - 20px); /* Adjust the width of the event boxes */
-    margin-bottom: 20px;
-    text-align: center;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-.event-box i {
-    font-size: 32px;
-    color: #008080; /* Icon color */
-}
-
-.event-box h3 {
-    font-size: 18px;
-    margin-top: 10px;
-    color: #008080; /* Event title color */
-}
-
-.event-box p {
-    font-size: 14px;
-    color: #333; /* Event description color */
-}
-
-
-
- 
-    </style>
-
 </head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light custom-navbar">
+    <div class="container">
+      <a class="navbar-brand" href="#home">Deliverance Church - Mateka</a>
+      <button class="navbar-toggler" type="button" data-toggle="offcanvas" data-target="#offcanvas"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">
+              <i class="fas fa-home"></i> Home
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">
+              <i class="fas fa-info-circle"></i> About us
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#sermons">
+              <i class="fas fa-microphone"></i> Sermons
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#events">
+              <i class="fas fa-calendar-alt"></i> Events
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="ministries.html">
+              <i class="fas fa-church"></i> Ministries
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="donate.html">
+              <i class="fas fa-donate"></i> Give
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="visit.html">
+              <i class="fas fa-map-marker-alt"></i> Visit Us
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  
+  <!-- Add this code below your existing navigation bar -->
+  
+  <div id="offcanvas" class="offcanvas">
+    <div class="offcanvas-header">
+      <button type="button" class="close" data-dismiss="offcanvas" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="offcanvas-body">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">
+            <i class="fas fa-home"></i> Home
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="about.html">
+            <i class="fas fa-info-circle"></i> About us
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#sermons">
+            <i class="fas fa-microphone"></i> Sermons
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#events">
+            <i class="fas fa-calendar-alt"></i> Events
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="ministries.html">
+            <i class="fas fa-church"></i> Ministries
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="donate.html">
+            <i class="fas fa-donate"></i> Give
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="visit.html">
+            <i class="fas fa-map-marker-alt"></i> Visit Us
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  
 
-<!-- Navigation Bar -->
- 
-    <!-- Navbar content with navigation links -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
-      <div class="container">
-        <a class="navbar-brand" href="#home">Deliverance Church - Mateka</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-            <li class="nav-item"><a class="nav-link" href="about.html">About us</a></li>
-            <li class="nav-item"><a class="nav-link" href="sermons.html">Sermons</a></li>
-            <!-- <li class="nav-item"><a class="nav-link" href="#events">Events</a></li> -->
-            <li class="nav-item"><a class="nav-link" href="ministries.html">Ministries</a></li>
-            <li class="nav-item"><a class="nav-link" href="donate.html">Give</a></li>
-            <li class="nav-item"><a class="nav-link" href="visit.html">Visit Us</a></li>
-          </ul>
+<!-- Hero Section -->
+<section id="home" class="bg-light text-white text-center py-5">
+  <div class="home-intro-text">
+    <h1 class="name hero-text">Faith Through the Storm</h1>
+    <p class="subtitle hero-text">"The righteous cry out, and the LORD hears them; he delivers them from all their troubles. The LORD is close to the brokenhearted and saves those who are crushed in spirit."</p>
+    <p class="title-verse">Psalms 34:17-18</p>
+  </div>  
+  <div class="welcome-intro-text slide-in-right">
+    <h2 class="welcome-home">Deliverance Church - Mateka</h2>
+    <p class="tag hero-text"><span class="multitext"></span>
+    </p>
+
+  </div>
+</section>
+
+<section id="church-info" class="bg-light py-5">
+  <div class="info-container">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="principle-card">
+          <div class="icon">
+            <i class="fas fa-bible"></i>
+          </div>
+          <h3 class="principle-title">Founded on the Word of God</h3>
+          <p class="principle-description">
+            We are rooted in the teachings of the Bible, seeking guidance and wisdom from Scripture.
+          </p>
         </div>
       </div>
-    </nav>
-
-
-  <!-- Hero Section -->
-  <section id="home" class="bg-light text-white text-center py-5">
-    <div class="home-intro-text">
-      <h1 class="name hero-text">We Invite You to Deliverance Church Mateka<h1>
-      <p class="role hero-text">The Church of Choice</p>
-      <p class="subtitle hero-text">Blessed is the one who perseveres under trial because, having stood the test, that person will receive the crown of life that the Lord has promised to those who love him. </p>
-      <p class="title-verse">James 1:12</p>
-    </div>  
-  </section>
-
-    <section id="events" class="hero">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-md-6">
-                    <h1 class="text-center"> Weekly Events</h1>
-                    <!-- Add your content here -->
-                </div>
-                <div class="col-md-6">
-                    <div class="image-slider">
-                        <!-- Add your image slider content here -->
-                        <!-- ... -->
-                    </div>
-                    <div class="event-boxes mt-4">
-                        <!-- Add your styled icon boxes for planned events here -->
-                        <div class="event-box mb-3 p-3">
-                            <i class="fas fa-calendar"></i>
-                            <h3 class="mt-2">Bible Study</h3>
-                            <p>Come Study the Word Every Wednesday</p>
-                        </div>
-                        <div class="event-box mb-3 p-3">
-                            <i class="fas fa-calendar"></i>
-                            <h3 class="mt-2">Cell Group Meeting</h3>
-                            <p>We Meet Every Friday
-                            </p>
-                        </div>
-                        <div class="event-box p-3">
-                            <i class="fas fa-calendar"></i>
-                            <h3 class="mt-2">Sunday Service</h3>
-                            <p>Church Service from 8:30 AM - 12:00 PM</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+      <div class="col-md-6">
+        <div class="principle-card">
+          <div class="icon">
+            <i class="fas fa-church"></i>
+          </div>
+          <h3 class="principle-title">Apostolic in Governance</h3>
+          <p class="principle-description">
+            Our church is led by apostolic principles, emphasizing strong leadership and spiritual authority.
+          </p>
         </div>
-    </section>
+      </div>
+      <div class="col-md-6">
+        <div class="principle-card">
+          <div class="icon">
+            <i class="fas fa-fire"></i>
+          </div>
+          <h3 class="principle-title">Pentecostal in Practice</h3>
+          <p class="principle-description">
+            We embrace the Pentecostal tradition, experiencing the power and gifts of the Holy Spirit.
+          </p>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="principle-card">
+          <div class="icon">
+            <i class="fas fa-tree"></i>
+          </div>
+          <h3 class="principle-title">Indigenous in Foundation</h3>
+          <p class="principle-description">
+            Our church has deep roots in the local community, valuing cultural diversity and heritage.
+          </p>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="principle-card">
+          <div class="icon">
+            <i class="fas fa-globe"></i>
+          </div>
+          <h3 class="principle-title">Evangelistic in Approach</h3>
+          <p class="principle-description">
+            We are committed to spreading the Gospel and sharing the love of Christ with the world.
+          </p>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="principle-card">
+          <div class="icon">
+            <i class="fas fa-balance-scale"></i>
+          </div>
+          <h3 class="principle-title">Autonomous in Operation</h3>
+          <p class="principle-description">
+            Each congregation has the freedom to govern itself while remaining united in faith.
+          </p>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="principle-card">
+          <div class="icon">
+            <i class="fas fa-hands-helping"></i>
+          </div>
+          <h3 class="principle-title">Transformative in Community</h3>
+          <p class="principle-description">
+            We strive to make a positive impact on our community, serving and supporting those in need.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<section class="events-section">
+  <div class="container">
+      <div class="row">
+          <div class="col-md-6">
+              <!-- Left column -->
+              <div class="leftbox card">
+                  <div class="card-body">
+                      <h3>Join Our Events</h3>
+                      <p>Experience spiritual growth, fellowship, and fun at our church events.<br>Stay updated with our upcoming events that cater to all ages and interests.</p>
+                  </div>
+              </div>
+          </div>
+          <div class="col-md-6">
+              <!-- Right column -->
+              <div class="events-list">
+                  <div class="event-card card" data-event="Sunday Service">
+                      <div class="card-body">
+                          <h4>Sunday Service</h4>
+                          <p>Click for Event Details</p>
+                      </div>
+                  </div>
+                  <div class="event-card card" data-event="Cell Group">
+                      <div class="card-body">
+                          <h4>Cell Group</h4>
+                          <p>Click for Event Details</p>
+                      </div>
+                  </div>
+                  <div class="event-card card" data-event="Bible Study">
+                      <div class="card-body">
+                          <h4>Bible Study</h4>
+                          <p>Click for Event Details</p>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</section>
+
+  <!-- The Modal -->
+  <div class="modal" id="eventModal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h4 id="modalTitle"></h4>
+      <p id="modalDescription"></p>
+    </div>
+  </div>
+
+
 
 <!-- Sermon Content -->
-    <section id="sermons" class="hero">
-    <h2 class="text-center mb-4">God's Word</h2>
+<section id="sermons">
+  <h2 class="text-center mb-4">God's Word</h2>
 
     <div class="row">
         <!-- Sermon Card 1 -->
@@ -245,50 +306,78 @@
     </div>
 </section>
 
-<!-- Main Page Content -->
-<div id="home">
-    <!-- Other content on your main page -->
-
-    <!-- Donate Section -->
-    <section id="donate" class="container my-5 text-center">
-        <h2>Support Our Mission</h2>
-        <p>Your donations help us make a difference.</p>
-        <a href="donate.html" class="btn btn-primary">Donate Now</a>
-    </section>
+<section class="contact">
+  <div class="contact-details">
+    <h2>Contact Us</h2>
+    <p>You can contact us via these Avenues</p>
+  </div>
+  <div class="contact-container">
+    <div class="contactInfo">
+      <div class="box">
+        <div class="icon"><i class="fa fa-map-marker" aria-hidden="true"></i></div>
+        <div class="text">
+          <h3>Address</h3>
+          <p>P.O Box 1520-50200<br>Mateka-Bungoma</p>
+        </div>
+      </div>
+      <div class="box">
+        <div class="icon"><i class="fa fa-phone" aria-hidden="true"></i></div>
+        <div class="text">
+          <h3>Phone</h3>
+          <p>+254 722 238 438</p>
+        </div>
+      </div>
+      <div class="box">
+        <div class="icon"><i class="fa fa-envelope" aria-hidden="true"></i></div>
+        <div class="text">
+          <h3>Email</h3>
+          <p>jmusunguus@gmail.com</p>
+        </div>
+      </div>
+    </div>
+    <div class="contactForm">
+      <form>
+        <h2>Send Message</h2>
+        <div class="inputBox">
+  <input type="text" id="fullName" name="fullName" required="required">
+  <label for="fullName">Full Name</label>
 </div>
 
+<div class="inputBox">
+  <input type="email" id="email" name="email" required="required">
+  <label for="email">Email</label>
+</div>
 
+<div class="inputBox">
+  <textarea id="message" name="message" required="required"></textarea>
+  <label for="message">Message</label>
+</div>
 
-  <!-- Contact Section -->
-  <section id="contact" class="contact-section custom-contact-section">
-    <div class="container">
-      <h2 class="mb-4">Get in Touch</h2>
-      <p class="lead">Feel free to reach out for collaboration and inquiries.</p>
-      <p>Email: <a href="mailto:jmusunguus@gmail.com">jmusunguus@gmail.com</a></p>
-      <p>Mobile: <a href="tel:+254722238438" style="color: #99ff33;">+254 722 238 438</a></p>
-      <p>Mobile: <a href="tel:+254720701989" style="color: #99ff33;">+254 720 701 989</a></p>
-      <div class="Whatsapp text-center">
-        <i class="fab fa-whatsapp fa-2x"></i>
-        <a href="tel:+254722238438, tel:+254720701989" target="_blank">Whatsapp</a>
-          <!-- Add more contact information as needed -->
+<div class="inputBox">
+  <input type="submit" value="Send">       
+</div>
+
+      </form>
     </div>
-     <div class="facebook">
-        <i class="fab fa-facebook fa-2x"></i>
-        <a href="https://www.facebook.com/your-facebook-page-url" target="_blank">Facebook</a>
-    </div>
-  </section>
+  </div>
+</section>
 
-
-  <!-- Footer Section -->
+      <!-- Footer Section -->
   <footer class="bg-dark text-white text-center py-3">
     <div class="container">
       <p aria-label="Copyright notice">&copy; 2023 Deliverance Church Mateka. All rights reserved.</p>
     </div>
   </footer>
 
-   <!-- Add Bootstrap and jQuery scripts here -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+
+</body>
+    
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script src="dcmateka.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.1/ScrollTrigger.min.js"></script>
+    <script src="main.js"></script>
+    
+
+    
 </html>
