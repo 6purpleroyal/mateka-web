@@ -17,14 +17,47 @@
     <link rel="stylesheet" href="styles.css">
     <style>
         /* Ministries Section */
+#Ministries-hero{
+  background-image: url('sermons2-bg.jpg'); /* Replace 'your-image.jpg' with your image file path */
+  background-size: cover;
+  background-position: center;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Center vertically */
+  height: 100vh; /* Make sure the section takes up the full viewport height */
+}
+
 .ministries-section {
-  background-color: #008080; /* Change to your desired background color */
+  background-color: #f6f2e8; /* Change to your desired background color */
   padding: 50px 0;
   margin-bottom: 20px;
   border-radius: 10px;
   display: block;
+  margin-top: 20px;
 }
 
+.ministries-section .container h2{
+  display: block;
+  font-size: 36px;
+ 
+}
+
+/* CSS for slide-in from right animation */
+.slide-in-right {
+  transform: translateX(100%);
+  animation: slideRight 1s ease-in-out forwards;
+}
+
+@keyframes slideRight {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
 /* Center the project cards */
 .ministries-section .row {
   display: flex;
@@ -34,7 +67,7 @@
 
 /* Change the background color of the project cards */
 .ministries-section .ministries-card {
-  background-color: #e6e6e6; /* Change to your desired card background color */
+  background-color: royalblue; /* Change to your desired card background color */
   margin: 20px;
   border-radius: 20px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
@@ -58,11 +91,11 @@
 }
 
 .ministries-section .card-front {
-  background-color: #f0f0f0; /* Add your background color */
+  background-color: gold; /* Add your background color */
 }
 
 .ministries-section .card-back {
-  background-color: #6dffff; /* Add your background color */
+  background-color: burlywood; /* Add your background color */
   transform: rotateY(180deg);
 }
 
@@ -86,12 +119,12 @@
 }
 
 .ministries-section .btn-primary:hover {
-  background-color: #0056b3; /* Change the hover color */
+  background-color: gold; /* Change the hover color */
 }
 
 /* Change the background color of the entire section */
 .ministries-section h2 {
-  color: #fff; /* Change to your desired text color */
+  color: #3d535f; /* Change to your desired text color */
   text-align: center;
   margin-bottom: 5px;
   margin-top: 50px;
@@ -143,43 +176,120 @@
     background-color: #0056b3;
 }
 
-    </style>
+</style>
 
 </head>
-<body>
+
     <!-- Navigation Bar -->
- 
-    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-light custom-navbar">
       <div class="container">
         <a class="navbar-brand" href="#home">Deliverance Church - Mateka</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+        <button class="navbar-toggler" type="button" data-toggle="offcanvas" data-target="#offcanvas"
           aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav ml-auto">
-            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-            <li class="nav-item"><a class="nav-link" href="about.html">About us</a></li>
-            <li class="nav-item"><a class="nav-link" href="sermons.html">Sermons</a></li>
-            <!-- <li class="nav-item"><a class="nav-link" href="#events">Events</a></li> -->
-            <li class="nav-item"><a class="nav-link" href="ministries.html">Ministries</a></li>
-            <li class="nav-item"><a class="nav-link" href="donate.html">Give</a></li>
-            <li class="nav-item"><a class="nav-link" href="visit.html">Visit Us</a></li>
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">
+                <i class="fas fa-home"></i> Home
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">
+                <i class="fas fa-info-circle"></i> About us
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="index.html#sermons">
+                <i class="fas fa-microphone"></i> Sermons
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="index.html#events">
+                <i class="fas fa-calendar-alt"></i> Events
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="ministries.html">
+                <i class="fas fa-church"></i> Ministries
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="donate.html">
+                <i class="fas fa-donate"></i> Give
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="visit.html">
+                <i class="fas fa-map-marker-alt"></i> Visit Us
+              </a>
+            </li>
           </ul>
         </div>
       </div>
     </nav>
-    <!-- Navigation bar and other content (index.html) -->
-
+    
+    <!-- Add this code below your existing navigation bar -->
+    
+    <div id="offcanvas" class="offcanvas">
+      <div class="offcanvas-header">
+        <button type="button" class="close" data-dismiss="offcanvas" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="offcanvas-body">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">
+              <i class="fas fa-home"></i> Home
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">
+              <i class="fas fa-info-circle"></i> About us
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="index.html#sermons">
+              <i class="fas fa-microphone"></i> Sermons
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="index.html#events">
+              <i class="fas fa-calendar-alt"></i> Events
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="ministries.html">
+              <i class="fas fa-church"></i> Ministries
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="donate.html">
+              <i class="fas fa-donate"></i> Give
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="visit.html">
+              <i class="fas fa-map-marker-alt"></i> Visit Us
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    
 
 <!-- Hero Section -->
-<section id="Ministries-hero" class="bg-light text-white text-center py-5 fullscreen-hero" style="background-image: url('main-bg.jpg');">
+<section id="Ministries-hero" class="bg-light text-white text-center py-5 fullscreen-hero" style="background-image: url('sermons2-bg.jpg');">
 
 
     <div class="intro-text">
         <h1 class="name hero-text">Our Ministries</h1>
     </div>
 </section>
+
+<body>
     
 <!-- Portfolio Projects Section -->
 <section id="ministries" class="colored-section ministries-section">
@@ -258,7 +368,25 @@
     </div>
   </footer>    
 
+
+
     <!-- Include Bootstrap JS and your custom JavaScript if needed -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.5.0/dist/js/bootstrap.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+      // Add this JavaScript code at the end of your HTML, after including jQuery and Bootstrap JS
+  $(document).ready(function () {
+      $('[data-toggle="offcanvas"]').on('click', function () {
+          $('#offcanvas').toggleClass('open');
+      });
+  
+      // Close the off-canvas menu when the close button is clicked
+      $('.offcanvas .close').on('click', function () {
+          $('#offcanvas').removeClass('open');
+      });
+  });
+  
+    </script>
+
 </body>
 </html>
