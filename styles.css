@@ -41,7 +41,7 @@ body {
 }
 
 .custom-navbar .navbar-brand {
-  color: #fff;
+  color:gold;
   font-weight: 500;
 }
 /*.custom-navbar .navbar-nav .nav-item{
@@ -107,30 +107,81 @@ body {
 
 
 /* Default styles for off-canvas menu */
+/* Add this CSS for the full-screen overlay menu */
+/* Style for the grid menu icon */
+.navbar-toggler .fas.fa-th {
+  font-size: 24px; /* Adjust the font size as needed */
+  color: gold; /* Icon color */
+  /* Add any other styles you want */
+}
+
+#overlay-container {
+  position: relative;
+}
+
+/* Style the overlay background */
+#overlay-container::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6); /* Semi-transparent black background */
+  z-index: 999; /* Place it above everything */
+  opacity: 0; /* Initially, the overlay is invisible */
+  visibility: hidden;
+  transition: opacity 0.3s ease-in-out, visibility 0s linear 0.3s;
+}
+
+/* Show the overlay when the menu is open */
+.offcanvas.open #overlay-container::before {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* CSS for the rotating off-canvas menu */
 .offcanvas {
   position: fixed;
   top: 0;
-  right: -300px; /* Adjust the initial position off the screen */
-  width: 150px;
+  right: 0;
+  width: 100%;
   height: 100%;
-  background-color: #e6e6fa;
+  background-color: burlywood;
   z-index: 1000;
-  transition: right 0.3s ease-in-out;
-  box-shadow: -5px 0 10px rgba(0, 0, 0, 0.2);
+  transform-origin: right top; /* Set the rotation origin to top-right */
+  transform: rotate(-90deg); /* Rotate initially to hide it */
+  transition: transform 0.3s ease-in-out;
 }
 
 .offcanvas.open {
-  right: 0; /* Show the off-canvas menu */
+  transform: rotate(0deg); /* Rotate into view */
 }
+
+
+/* Your other existing styles for the off-canvas menu */
+
+/* Center the menu items vertically */
+.offcanvas .offcanvas-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
 
 .offcanvas-header {
   padding: 1rem;
-  background-color: #e6e6fa;
-  color: #fff;
+  background-color: burlywood;
+  color: #3d535f;
 }
 
 .offcanvas-body {
   padding: 1rem;
+}
+
+.offcanvas a{
+  color: #00bcd4;
 }
 
 .navbar-toggler {
@@ -139,7 +190,7 @@ body {
 
 /* Hover effect for offcanvas menu links */
 .offcanvas .navbar-nav .nav-link:hover {
-  color: #daa520; /* Change the link color on hover */
+  color: yellowgreen; /* Change the link color on hover */
 }
 
 /* Mobile Devices (320px - 480px) */
@@ -153,6 +204,10 @@ body {
 @media (min-width: 481px) and (max-width: 768px) {
   .offcanvas {
     width: 200px; /* Adjust width for iPads and Tablets */
+    opacity: 0.6;
+  }
+  .offcanvas a{
+    opacity: 1;
   }
 }
 
@@ -176,7 +231,6 @@ body {
     width: 350px; /* Adjust width for extra large screens and TVs */
   }
 }
-
 /* Hero Section Styles */
 #home {
   background-color: #f6f2e8; /* Parchment background color */
@@ -199,6 +253,7 @@ body {
   width: 50%; /* Take up 50% of the parent container's width (left half) */
   text-align: left; /* Align text to the left within the container */
   padding-left: 20px; /* Add some left padding for spacing */
+  padding-top: 20px;
   position: relative;
 }
 
@@ -214,9 +269,9 @@ body {
 }
 
 .title-verse {
-	font-size: 16px;
+	font-size: 18px;
   font-style: italic; /* Italicize the verse */
-  color: #3d535f; /* Purple color for verse */
+  color: gold; /* Purple color for verse */
   font-weight: 500;
 }
 
@@ -237,6 +292,135 @@ body {
   text-align: left;
   padding-left: 20px;
   font-size: 36px;
+}
+
+/* Media query for mobile devices (320px - 480px) */
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  .home-intro-text {
+    order: 2; /* Change the order to 1, placing it below */
+  }
+
+  .wwelcome-home {
+    order: 1; /* Change the order to 2, placing it below */
+  }
+}
+
+/* Media query for mobile devices (481px - 768px) */
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  .home-intro-text {
+    order: 2; /* Change the order to 1, placing it below */
+  }
+
+  .welcome-home {
+    order: 1; /* Change the order to 2, placing it below */
+  }
+}
+
+.intro-container {
+  /*display: flex; Ensure it's a flex container */
+  flex-direction: column; /* Change to column for stacking */
+}
+
+@media screen and (min-width: 769px) {
+  .home-intro-text {
+    order: 1; /* Reset the order to 1 for larger screens (side by side) */
+    /* Optionally, you can also adjust other styles for larger screens */
+  }
+
+  .welcome-intro-text {
+    order: 2; /* Reset the order to 2 for larger screens (side by side) */
+    /* Optionally, you can also adjust other styles for larger screens */
+  }
+
+  /* Adjust flex-direction for the parent container to keep them side by side */
+  .intro-container {
+    display: flex; /* Ensure it's a flex container */
+    flex-direction: row; /* Change to row for side by side */
+  }
+}
+
+/* Your existing styles for larger screens (outside the media query) */
+
+/* Media query for screens up to 768px */
+@media screen and (max-width: 768px) {
+  .intro-container > .welcome-intro-text {
+    margin-left: 120px; /* Add margin to the right of the element */
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .intro-container > .home-intro-text {
+    margin-left: 160px; /* Add margin to the right of the element */
+  }
+}
+
+
+@media screen and (max-width: 768px) {
+  /* Target child elements and reduce font size within this media query */
+  .intro-container .dc-slogan {
+    font-size: 18px; /* Adjust the font size as needed */
+  }
+
+  .intro-container .multitext {
+    font-size: 20px; /* Adjust the font size as needed */
+  }
+}
+
+@media screen and (max-width: 768px) {
+  /* Target child elements and reduce font size within this media query */
+  .intro-container .name.hero-text {
+    font-size: 24px; /* Adjust the font size as needed */
+  }
+
+  .intro-container .subtitle.hero-text {
+    font-size: 20px; /* Adjust the font size as needed */
+  }
+
+  .intro-container .welcome-home{
+    font-size: 24px;
+  }
+}
+
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+.multitext::after {
+  content: "✓"; /* Cursor blinking effect */
+  animation: blink 0.7s infinite alternate;
+}
+
+@keyframes blink {
+  to {
+    opacity: 0;
+  }
+}
+
+.dc-slogan h2{
+  font-size: 36px;
+}
+
+.dc-slogan {
+  opacity: 0; /* Start with opacity set to 0 to hide the element */
+  transform: translateY(-50px); /* Move the element 50px up */
+  animation: slideFromTop 4s ease-out 2s forwards; /* Use a custom animation */
+}
+
+@keyframes slideFromTop {
+  0% {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* Style for the welcome-intro-text */
@@ -283,15 +467,16 @@ body {
 
  h2{
  	display: block;
- 	font-size: 7em;
- 	font-weight: 900;
+ 	font-size: 1em;
+ 	font-weight: 700;
  	color: #3d535f;
+  font-style: italic;
 
  }
 /* CSS for slide-in from right animation */
 .slide-in-right {
   transform: translateX(100%);
-  animation: slideRight 1s ease-in-out forwards;
+  animation: slideRight 2s ease-in-out forwards;
 }
 
 @keyframes slideRight {
@@ -720,5 +905,5 @@ body {
 }
 
 .close:hover {
-  color: #000;
+  color: burlywood;
 }
