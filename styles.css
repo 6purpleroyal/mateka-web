@@ -115,6 +115,35 @@ body {
   /* Add any other styles you want */
 }
 
+/* Your existing CSS styles */
+
+/* Mobile Devices (320px - 480px) */
+@media (max-width: 480px) {
+  /* Add your responsive styles for screens up to 480px here */
+
+  .custom-navbar .navbar-nav .nav-link {
+    font-size: 16px; /* Adjust font size for smaller screens */
+  }
+
+  /* Adjust other styles as needed */
+  .button {
+    font-size: 20px; /* Adjust font size for buttons on smaller screens */
+    margin: 20px 5px; /* Adjust margins for buttons on smaller screens */
+  }
+
+  /* Responsive styles for the hero section */
+  #home {
+    background-position: center; /* Center the background image on smaller screens */
+    background-size: cover;
+    background-attachment: scroll; /* Scrollable background for smaller screens */
+  }
+
+  .home-intro-text, .welcome-intro-text {
+    width: 100%; /* Take up full width on smaller screens */
+  }
+}
+
+
 #overlay-container {
   position: relative;
 }
@@ -344,13 +373,13 @@ body {
 /* Media query for screens up to 768px */
 @media screen and (max-width: 768px) {
   .intro-container > .welcome-intro-text {
-    margin-left: 120px; /* Add margin to the right of the element */
+    margin-left: 80px; /* Add margin to the right of the element */
   }
 }
 
 @media screen and (max-width: 768px) {
   .intro-container > .home-intro-text {
-    margin-left: 160px; /* Add margin to the right of the element */
+    margin-left: 120px; /* Add margin to the right of the element */
   }
 }
 
