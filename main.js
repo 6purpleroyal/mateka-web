@@ -171,10 +171,64 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 });
 
+const textPhrases = ["Build Hope", "Grow Faith", "Live for God"];
+const textElement = document.querySelector('.multitext');
 
+let index = 0;
+let charIndex = 0;
 
+function typeText() {
+  const currentPhrase = textPhrases[index];
+  const typingSpeed = 80; // Adjust typing speed as needed
+  const lineBreakSpeed = 1000; // Delay after typing a line
+  const clearSpeed = 100; // Speed for clearing text
+  const pauseBeforeClear = 3000; // Pause before clearing text
+  const pauseBeforeRepeat = 5000; // Pause before repeating
 
+  let typingInterval = setInterval(() => {
+    if (charIndex < currentPhrase.length) {
+      textElement.textContent += currentPhrase.charAt(charIndex);
+      charIndex++;
+    } else {
+      clearInterval(typingInterval);
+      charIndex = 0; // Reset charIndex
 
+      // After typing the phrase, wait for lineBreakSpeed milliseconds
+      setTimeout(() => {
+        eraseText();
+      }, lineBreakSpeed);
+    }
+  }, typingSpeed);
 
+  function eraseText() {
+    let erasingInterval = setInterval(() => {
+      if (charIndex > 0) {
+        textElement.textContent = textElement.textContent.slice(0, charIndex - 1);
+        charIndex--;
+      } else {
+        clearInterval(erasingInterval);
+        setTimeout(() => {
+          textElement.textContent = ""; // Clear the text
+          setTimeout(() => {
+            index = (index + 1) % textPhrases.length; // Loop through the phrases
+            if (index === 0) {
+              // If it's the end of the loop, pause before repeating
+              setTimeout(() => {
+                typeText(); // Start typing the next phrase
+              }, pauseBeforeRepeat);
+            } else {
+              typeText(); // Start typing the next phrase without pause
+            }
+          }, pauseBeforeClear);
+        }, clearSpeed);
+      }
+    }, clearSpeed);
+  }
+}
 
+// Start the typing animation
+setTimeout(typeText, 1000); // Initial delay before starting
 
+window.onload = function () {
+  window.scrollTo(0, 0); // Scroll to the top of the page on load
+};
