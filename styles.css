@@ -106,7 +106,7 @@ body {
 }
 
 
-/* Add this CSS code */
+/* Default styles for off-canvas menu */
 .offcanvas {
   position: fixed;
   top: 0;
@@ -136,10 +136,47 @@ body {
 .navbar-toggler {
   display: block; /* Ensure the button is visible on all screen sizes */
 }
+
 /* Hover effect for offcanvas menu links */
 .offcanvas .navbar-nav .nav-link:hover {
   color: #daa520; /* Change the link color on hover */
 }
+
+/* Mobile Devices (320px - 480px) */
+@media (min-width: 320px) and (max-width: 480px) {
+  .offcanvas {
+    width: 100%; /* Adjust width for mobile devices */
+  }
+}
+
+/* iPads and Tablets (481px - 768px) */
+@media (min-width: 481px) and (max-width: 768px) {
+  .offcanvas {
+    width: 200px; /* Adjust width for iPads and Tablets */
+  }
+}
+
+/* Small Screens and Laptops (769px - 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .offcanvas {
+    width: 250px; /* Adjust width for small screens and laptops */
+  }
+}
+
+/* Desktops and Large Screens (1025px - 1200px) */
+@media (min-width: 1025px) and (max-width: 1200px) {
+  .offcanvas {
+    width: 300px; /* Adjust width for desktops and large screens */
+  }
+}
+
+/* Extra Large Screens and TVs (1201px and more) */
+@media (min-width: 1201px) {
+  .offcanvas {
+    width: 350px; /* Adjust width for extra large screens and TVs */
+  }
+}
+
 /* Hero Section Styles */
 #home {
   background-color: #f6f2e8; /* Parchment background color */
