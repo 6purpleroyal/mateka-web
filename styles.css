@@ -1,158 +1,687 @@
-/* Global Styles */
+@import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900display=swap');
+/* Define the colors */
 body {
-  font-family: Caudex, sans-serif;
-  font-size: 16px;
-  line-height: 1.6;
-  font-weight: 400;
-  color: #f2f2f2;
- } 
-
-
-/* Hero Section Background Image */
-#home {
-  background-image: url('home-bg.jpg'); /* Replace 'your-image.jpg' with your image file path */
-  background-size: cover;
-  background-position: center;
-  margin-bottom: 20px;
-  border-radius: 10px;
-  display: block;
+  background-color: #f6f2e8; /* A shade of off-white for the page background */
 }
 
-  /* Header Styles */
-.home-intro-text {
-  text-align: center;
-  margin-top: 10px;
+.parchment-container {
+  background-color: #f6f2e8; /* Match the page background color */
+  padding: 20px; /* Add some padding to create space for content */
+  border: 1px solid #d8c4a3; /* Add a border to mimic parchment edges */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
 }
 
-/* Name and Role */
-.name {
-  font-family: "Quicksand", sans-serif;
-  font-size: 76px;
+/* Style the text content inside the container */
+.parchment-container h1 {
+  color: #7f5e3e; /* A shade of brown for headings */
+}
+
+.parchment-container p {
+  color: #333; /* Dark text color */
+}
+
+/* Define the purple and gold accents */
+.purple-text {
+  color: #800080; /* Purple text color */
+}
+
+.gold-text {
+  color: #ffd700; /* Gold text color */
+}
+
+/* styles.css */
+.custom-navbar {
+  background-color: #3d535f;
+}
+/*.custom-navbar:hover {
+  transform: scale(1.5);
+}*/
+.custom-navbar .navbar-nav {
+  justify-content: center;
+}
+
+.custom-navbar .navbar-brand {
+  color: #fff;
   font-weight: 500;
-  color: white;
-  margin-bottom: 5px;
+}
+/*.custom-navbar .navbar-nav .nav-item{
+  text-transform: capitalize;
+  transition: 0.5s;
+}*/
+.custom-navbar .navbar-nav .nav-link{
+  display: block;
+  position: relative;
+  padding: 5px;
+  font-size: 18px;
+  font-weight: 500;
+  color: #3d535f;
+  text-transform: uppercase;
+  transition: 0.5s;
+}
+/* Hover effect for navbar links */
+.custom-navbar .navbar-nav .nav-item:hover {
+  transform: scale(1.5);
+  opacity: .2;
+  filter: blur(0);
+}
+/* Hover effect for navbar links */
+.custom-navbar .navbar-nav .nav-item .nav-link:hover {
+  transform: scale(1.1);
+  color: #3d535f; /* Change the link color on hover */
+  opacity: 1;
+
+}
+.custom-navbar .navbar-nav .nav-link:before{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #D4AF37;
+  transition: transform 0.5s;
+  transform-origin: right;
+  transform: scale(0);
+  z-index: -1;
+}
+.custom-navbar .navbar-nav .nav-link:hover:before{
+  transition: transform 0.5s;
+  transform-origin: left;
+  transform: scale(1.1);
 }
 
-.role {
-  font-size: 66px;
-  color: white;
-  font-style: italic;
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: transparent;
+  transition: top 0.5s ease-in-out;
+  z-index: 1000; /* Adjust as needed */
+}
+
+
+/* Add this CSS code */
+.offcanvas {
+  position: fixed;
+  top: 0;
+  right: -300px; /* Adjust the initial position off the screen */
+  width: 150px;
+  height: 100%;
+  background-color: #e6e6fa;
+  z-index: 1000;
+  transition: right 0.3s ease-in-out;
+  box-shadow: -5px 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.offcanvas.open {
+  right: 0; /* Show the off-canvas menu */
+}
+
+.offcanvas-header {
+  padding: 1rem;
+  background-color: #e6e6fa;
+  color: #fff;
+}
+
+.offcanvas-body {
+  padding: 1rem;
+}
+
+.navbar-toggler {
+  display: block; /* Ensure the button is visible on all screen sizes */
+}
+/* Hover effect for offcanvas menu links */
+.offcanvas .navbar-nav .nav-link:hover {
+  color: #daa520; /* Change the link color on hover */
+}
+/* Hero Section Styles */
+#home {
+  background-color: #f6f2e8; /* Parchment background color */
+  color: #3d535f; /* Brown text color */
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  background-image: url('hero-bg.jpeg'); /* Add your image URL here */
+  background-position: right; /* Position the image to the right */
+  background-size: cover; /* Cover the entire viewport while maintaining aspect ratio */
+  background-repeat: no-repeat; /* Prevent image from repeating */
+  background-attachment: fixed; /* Fixed background for parallax effect (optional) */
+}
+
+/* CSS */
+.home-intro-text {
+  width: 50%; /* Take up 50% of the parent container's width (left half) */
+  text-align: left; /* Align text to the left within the container */
+  padding-left: 20px; /* Add some left padding for spacing */
+  position: relative;
+}
+
+
+.name.hero-text {
+	font-size: 34px;
+  font-weight: bold; /* Add font weight to the name */
+}
+
+.subtitle.hero-text {
+	font-size: 20px;
+  font-style: italic; /* Italicize the subtitle */
 }
 
 .title-verse {
-  font-size: 30px;
-  color: white;
-  font-style: italic;
+	font-size: 16px;
+  font-style: italic; /* Italicize the verse */
+  color: #3d535f; /* Purple color for verse */
+  font-weight: 500;
 }
 
-/* Subtitle */
-.subtitle {
-  font-size: 55px;
-  color: #001f3f;
-  line-height: 1.1;
-  padding: 10px;
-  text-align: center;
-  letter-spacing: -0.5px;
+/* Style the dotted line after the title-verse */
+.title-verse::after {
+  content: ''; /* Required for pseudo-element */
+  position: absolute;
+  bottom: -10px; /* Adjust this value to control the distance of the line from the text */
+  left: 0;
+  right: 0;
+  height: 2px; /* Height of the line */
+  background-color: #fff; /* Color of the line */
+  border-bottom: 2px dotted #fff; /* Dotted line effect */
+  border-radius: 50%; /* Makes the ends of the line curve up */
+}
+/* CSS for the home-intro-text and welcome-intro-text */
+.home-intro-text, .welcome-intro-text {
+  text-align: left;
+  padding-left: 20px;
+  font-size: 36px;
 }
 
-/* Add a class to target the hero text and subtitle */
-.hero-text {
-  opacity: 0;
-  transform: translateY(20px);
-  animation: fadeIn 3s ease forwards;
+/* Style for the welcome-intro-text */
+.home-intro-text {
+  display: none; /* Initially hide the welcome-intro-text */
 }
 
-/* Define the fadeIn animation */
-@keyframes fadeIn {
-  to {
+/* Animation classes (you can customize these animations) */
+.animate-in {
+  animation: fadeInUp 3s ease-in-out;
+  display: block !important;
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
     opacity: 1;
     transform: translateY(0);
   }
 }
 
-/* Contact Section */
-.custom-contact-section {
-  background-color: #008080;
-  padding: 50px 0;
-  text-align: center;
+/* CSS for the home-intro-text and welcome-intro-text */
+.home-intro-text, .welcome-intro-text {
+  text-align: left;
+  padding-left: 20px;
+}
+
+/* Style for the welcome-intro-text */
+.welcome-intro-text {
+  display: none; /* Initially hide the welcome-intro-text */
+}
+
+/* Style for the welcome-home heading */
+.welcome-home {
+  font-size: 36px; /* Adjust the font size as needed */
+  font-weight: bold; /* Add font weight for emphasis */
+}
+
+/* Animation classes (you can customize these animations) */
+/* CSS for scale-in animation */
+
+ h2{
+ 	display: block;
+ 	font-size: 7em;
+ 	font-weight: 900;
+ 	color: #3d535f;
+
+ }
+/* CSS for slide-in from right animation */
+.slide-in-right {
+  transform: translateX(100%);
+  animation: slideRight 1s ease-in-out forwards;
+}
+
+@keyframes slideRight {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.btns{
+	width: 100%;
+	position: relative;
+	left:150px;
+}
+.button{
+	outline: none;
+	border: none;
+	cursor: pointer;
+	font-size: 25px;
+	font-weight: 400;
+	color: #fff;
+	background-color: #3d535f;
+	padding: 8px 14px;
+	margin: 40px 5px;
+	letter-spacing: 2px;
+	text-transform: capitalize;
+	box-shadow: 0 15px 10px rgba(0, 0, 0, 0.4);
+}
+.button:hover{
+	background-color: #7600ff;
+}
+
+
+#events {
+  background-color: #666; /* Add your background image URL here */
+  background-size: cover;
+  padding: 60px 0;
   border-radius: 10px;
-  margin-bottom: 20px;
-  display: block;
+  width: 100%;
+  min-height: 100vh;
+  background-size: cover;
+  overflow-y: scroll;
 }
 
-.custom-contact-section a {
-  color: #99ff33;
+.events-section {
+  padding: 80px 0;
 }
 
-.custom-contact-section i{
-  margin-top: 5px;
-  color: limegreen;
+.event-card {
+  background-color: #D4AF37;
+  border-style: groove;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+  transition: transform 0.2s;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  transform: translateX(100%); /* Initially off-screen to the right */
 }
 
-/* Footer Section */
-.footer {
-  background-color: #333;
-  color: #fff;
-  text-align: center;
-  padding: 20px 0;
-  display: block;
+/* New CSS for the animation effect */
+.event-card.slide-in-right {
+  animation-duration: 1s; /* Adjust the animation duration as needed */
+  animation-fill-mode: both;
 }
 
-.footer p {
-  margin: 0;
+@keyframes slideInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
-/* Center the About Us title */
-h1.text-center {
+/* Mobile responsiveness */
+@media (max-width: 767px) {
+  .events-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     text-align: center;
+  }
+
+  .event-card.slide-in-right {
+    transform: translateY(100%);
+  }
 }
 
-/* Set flex properties for the sections */
-.image-slider {
-    flex: 1;
+
+/* Style the background color of the sermons section */
+/* Adjust the styles for the sermons and events sections */
+#sermons {
+    background-color: #FFD700;
+    padding: 60px 0;
+    border-radius: 10px;
+    width: 100%;
+    min-height: 100vh; /* Use min-height instead of height */
+    background-size: cover;
+    overflow-y: auto; /* Add vertical scrolling if needed */
 }
 
-.event-boxes {
-    flex: 1;
+#sermons h2 {
+    font-size: 32px;
+    color: #3d535f;
 }
 
-/* Style the event boxes */
-.event-box {
-    background-color: #f5f5f5;
-    border-radius: 20px;
-    padding: 20px;
-    margin-bottom: 20px;
+/* Style the sermon cards */
+.card {
+	background-color: #D4AF37;
+    border-style: groove;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    transition: transform 0.2s;
+    margin-left: 10px;
+    margin-right: 10px;
+    transform: translateX(100%); /* Initially off-screen to the right */
 }
 
-.event-box i {
+/* Add hover effect */
+.card:hover {
+    background-color: #008080; /* Change background color on hover */
+    transform: scale(2.0); /* Slight scale up effect on hover */
+}
+
+.card h1, .card p {
+  transition: color 0.3s; /* Smooth transition for text color */
+}
+
+.card:hover h1, .card:hover p {
+  color: #fff; /* Change text color on hover */
+}
+
+.card-title {
     font-size: 24px;
-    color: #007bff; /* Blue color, you can change this */
-}
-
-.event-box h3 {
-    margin-top: 10px;
-    font-size: 18px;
-}
-
-.event-box p {
-    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 10px;
     color: #333;
 }
 
-/* CSS for Fullscreen Hero Section */
-.fullscreen-hero {
-    height: 100vh; /* Set the height to 100% of the viewport height */
-    background-image: url('your-hero-background.jpg'); /* Add your hero background image */
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+.card-text {
+    font-size: 16px;
+    color: #666;
 }
 
+.card-img-top {
+    max-height: 200px;
+    object-fit: cover;
+}
 
+/* Style the "Read More" button */
+.btn-primary {
+    background-color: #007bff;
+    color: #fff;
+    transition: background-color 0.2s;
+}
 
+.btn-primary:hover {
+    background-color: #6A0DAD;
+}
 
+.contact{
+  position: relative;
+  min-height: 100vh;
+  padding: 50px 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column ;
+}
 
+.contact-details{
+  max-width: 800px;
+  text-align: center;
+}
+.contact-details h2{
+  font-size: 36px;
+  font-weight: 500;
+  color: #3d535f;
+}
+.contact-details p{
+  
+  font-weight: 400;
+  color: #3d535f;
+}
+.contact-container{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+}
+.contact-container .contactInfo{
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+}
+.contact-container .contactInfo .box{
+  position: relative;
+  padding: 20px 0;
+  display: flex;
+}
+.contact-container .contactInfo .box .icon{
+  min-width: 60px;
+  height: 60px;
+  background: #FFD700;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50px;
+  font-size: 22px;
+}
+.contact-container .contactInfo .box .text{
+  display: flex;
+  margin-left: 20px;
+  font-size: 16px;
+  color: #00bcd4;
+  flex-direction: column;
+  font-weight: 400;
+}
+.contact-container .contactInfo .box .text h3{
+  font-weight: 400;
+  color: #00bcd4;
+}
 
+.contactForm{
+  width: 40%;
+  padding: 40px;
+  background: #fff;
+}
+
+.contactForm h2{
+  font-size: 30px;
+  font-weight: 500;
+  color: #3d535f;
+}
+.contactForm .inputBox {
+  position: relative;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.contactForm .inputBox input,
+.contactForm .inputBox textarea {
+  width: 100%;
+  padding: 5px 0;
+  font-size: 16px;
+  margin: 10px 0;
+  border: none;
+  border-bottom: 2px solid #333;
+  outline: none;
+  resize: none;
+}
+
+.contactForm .inputBox label {
+  position: absolute;
+  left: 0;
+  padding: 5px 0;
+  font-size: 16px;
+  margin: 10px 0;
+  pointer-events: none;
+  transition: 0.5s !important; /* Reduced the transition duration to 0.5s */
+  color: #666; 
+  transform: translateY(-20px) !important; /* Move the label up initially */
+}
+
+/* Add transition to input fields and labels */
+.contactForm .inputBox input,
+.contactForm .inputBox textarea,
+.contactForm .inputBox label {
+  transition: all 0.5s ease !important; /* Apply a 0.3s transition with ease easing function */
+}
+
+/* Adjust label styles on focus or when input is valid */
+.contactForm .inputBox input:focus ~ label,
+.contactForm .inputBox input:valid ~ label,
+.contactForm .inputBox textarea:focus ~ label,
+.contactForm .inputBox textarea:valid ~ label {
+  color: #e91e63;
+  font-size: 12px;
+  transform: translateY(-20px) !important;
+}
+.contactForm .inputBox input[type="submit"]{
+  width: 100px;
+  background:#FFD700;
+  color: #666;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  font-size: 18px;
+}
+@media (max-width: 991px){
+  .contact{
+    padding: 50px;
+  }
+  .contact-container{
+    flex-direction: column;
+  }
+  .contact-container .contactInfo{
+    margin-bottom: 40px;
+  }
+  .contact-container .contactInfo, .contactForm{
+    width: 100%;
+  }
+}
+
+/* Style for the card */
+.about-card {
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  border-radius: 5px;
+  margin-top: 20px;
+}
+
+.about-card h3 {
+  color: #333;
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.about-card ul {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+.about-card li {
+  margin-bottom: 8px;
+  font-size: 1rem;
+  color: #555;
+}
+
+/* Additional styling for your existing section content */
+.content-reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.why {
+  margin-top: 40px;
+  /* Add any other styles you have for this section */
+}
+
+/* Style for the card when it's revealed */
+.about-card.active {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.3s; /* Delay the animation slightly */
+}
+
+/* CSS Styles */
+#church-info {
+  text-align: center;
+  background-color: #f6f2e8;
+}
+
+.icon-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.icon {
+  background-color: #D4AF37 ;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  margin: 0 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease-in-out;
+}
+
+.icon:hover {
+  transform: scale(1.1);
+}
+
+.section-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-top: 20px;
+  color: #333;
+}
+
+.principles {
+  font-size: 18px;
+  line-height: 1.6;
+  margin-top: 20px;
+  color: #555;
+}
+
+/* Add CSS styles for the modal */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  border-radius: 10px;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close:hover {
+  color: #000;
+}
