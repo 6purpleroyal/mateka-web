@@ -15,103 +15,107 @@
   <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
-  <nav class="navbar navbar-expand-lg navbar-light custom-navbar">
-    <div class="container">
-      <a class="navbar-brand" href="#home">Deliverance Church - Mateka</a>
-      <button class="navbar-toggler" type="button" data-toggle="offcanvas" data-target="#offcanvas"
-        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item">
+
+    <div id="overlay-container">
+    <nav class="navbar navbar-expand-lg navbar-light custom-navbar">
+        <div class="container">
+        <a class="navbar-brand" href="#home">Deliverance Church - Mateka</a>
+        <button class="navbar-toggler" type="button" data-toggle="offcanvas" data-target="#offcanvas"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="fas fa-th"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="index.html">
+                <i class="fas fa-home"></i> Home
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="about.html">
+                <i class="fas fa-info-circle"></i> About us
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="index.html#sermons">
+                <i class="fas fa-microphone"></i> Sermons
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="index.html#events">
+                <i class="fas fa-calendar-alt"></i> Events
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="ministries.html">
+                <i class="fas fa-church"></i> Ministries
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="donate.html">
+                <i class="fas fa-donate"></i> Give
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="visit.html">
+                <i class="fas fa-map-marker-alt"></i> Visit Us
+                </a>
+            </li>
+            </ul>
+        </div>
+        </div>
+    </nav>
+    
+    <!-- Add this code below your existing navigation bar -->
+    
+    <div id="offcanvas" class="offcanvas">
+        <div class="offcanvas-header">
+        <button type="button" class="close" data-dismiss="offcanvas" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+        </div>
+        <div class="offcanvas-body">
+        <ul class="navbar-nav">
+            <li class="nav-item">
             <a class="nav-link" href="index.html">
-              <i class="fas fa-home"></i> Home
+                <i class="fas fa-home"></i> Home
             </a>
-          </li>
-          <li class="nav-item">
+            </li>
+            <li class="nav-item">
             <a class="nav-link" href="about.html">
-              <i class="fas fa-info-circle"></i> About us
+                <i class="fas fa-info-circle"></i> About us
             </a>
-          </li>
-          <li class="nav-item">
+            </li>
+            <li class="nav-item">
             <a class="nav-link" href="index.html#sermons">
-              <i class="fas fa-microphone"></i> Sermons
+                <i class="fas fa-microphone"></i> Sermons
             </a>
-          </li>
-          <li class="nav-item">
+            </li>
+            <li class="nav-item">
             <a class="nav-link" href="index.html#events">
-              <i class="fas fa-calendar-alt"></i> Events
+                <i class="fas fa-calendar-alt"></i> Events
             </a>
-          </li>
-          <li class="nav-item">
+            </li>
+            <li class="nav-item">
             <a class="nav-link" href="ministries.html">
-              <i class="fas fa-church"></i> Ministries
+                <i class="fas fa-church"></i> Ministries
             </a>
-          </li>
-          <li class="nav-item">
+            </li>
+            <li class="nav-item">
             <a class="nav-link" href="donate.html">
-              <i class="fas fa-donate"></i> Give
+                <i class="fas fa-donate"></i> Give
             </a>
-          </li>
-          <li class="nav-item">
+            </li>
+            <li class="nav-item">
             <a class="nav-link" href="visit.html">
-              <i class="fas fa-map-marker-alt"></i> Visit Us
+                <i class="fas fa-map-marker-alt"></i> Visit Us
             </a>
-          </li>
+            </li>
         </ul>
-      </div>
+        </div>
     </div>
-  </nav>
+
   
-  <!-- Add this code below your existing navigation bar -->
-  
-  <div id="offcanvas" class="offcanvas">
-    <div class="offcanvas-header">
-      <button type="button" class="close" data-dismiss="offcanvas" aria-label="Close">
-        <span aria-hidden="true">&times;</span>
-      </button>
-    </div>
-    <div class="offcanvas-body">
-      <ul class="navbar-nav">
-        <li class="nav-item">
-          <a class="nav-link" href="index.html">
-            <i class="fas fa-home"></i> Home
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="about.html">
-            <i class="fas fa-info-circle"></i> About us
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="index.html#sermons">
-            <i class="fas fa-microphone"></i> Sermons
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="index.html#events">
-            <i class="fas fa-calendar-alt"></i> Events
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="ministries.html">
-            <i class="fas fa-church"></i> Ministries
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="donate.html">
-            <i class="fas fa-donate"></i> Give
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="visit.html">
-            <i class="fas fa-map-marker-alt"></i> Visit Us
-          </a>
-        </li>
-      </ul>
-    </div>
-  </div>
     <style>
 /* Add this CSS code to style the ministries and payment section */
 
